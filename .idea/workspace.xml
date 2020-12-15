@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8396eb02-81d5-416d-9baa-f0dabe2af56a" name="Default Changelist" comment="Commit Ajout du dossier image+acceuil.css">
+    <list default="true" id="8396eb02-81d5-416d-9baa-f0dabe2af56a" name="Default Changelist" comment="Commit Modification des images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -51,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607340114767</updated>
       <workItem from="1607340116148" duration="640000" />
-      <workItem from="1608046488749" duration="1566000" />
+      <workItem from="1608046488749" duration="2199000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ajout de l'index.html">
       <created>1608046772901</created>
@@ -67,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608047706093</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit Modification des images">
+      <created>1608048088581</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608048088581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +95,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit ajout de l'index.html" />
     <MESSAGE value="Commit Ajout du dossier image+acceuil.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Ajout du dossier image+acceuil.css" />
+    <MESSAGE value="Commit Modification des images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Modification des images" />
   </component>
 </project>

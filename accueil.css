@@ -1,4 +1,4 @@
-nav img{
+nav a img{
     display:inline-block;
     width: 150px;
 }
@@ -10,3 +10,10 @@ body{
     font-weight: normal;
 
 }
+
+nav a{
+
+    padding: 10px;
+}
+/* #91e4fb = bleu;
+c0c0c0 = gris;*/
