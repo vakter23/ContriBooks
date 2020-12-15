@@ -2,3 +2,11 @@ nav img{
     display:inline-block;
     width: 150px;
 }
+
+body{
+    margin:auto;
+    width:1028px;
+    background-color: #c0c0c0;
+    font-weight: normal;
+
+}
