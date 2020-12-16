@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8396eb02-81d5-416d-9baa-f0dabe2af56a" name="Default Changelist" comment="Commit Modification des images">
+      <change afterPath="$PROJECT_DIR$/controllers/ControllerAccueil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/Routeur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/ArticleManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/viewError.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accueil.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logoContribooks(old).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logoContribooks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +36,11 @@
     <option name="BRANCH" value="origin/vakter-branch" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lKJzw8zz4nBqJy1YJf0cyNoWPa" />
@@ -52,6 +67,7 @@
       <updated>1607340114767</updated>
       <workItem from="1607340116148" duration="640000" />
       <workItem from="1608046488749" duration="2199000" />
+      <workItem from="1608137986722" duration="10073000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ajout de l'index.html">
       <created>1608046772901</created>
@@ -85,7 +101,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="MVC" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
