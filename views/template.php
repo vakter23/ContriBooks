@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf8" />
         <title><?= $t ?></title>
     </head>
     <header>
-        <h1><a href="<?= URL ?>">AAAAAAAA</a></h1>
+        <h1><a href="<?= URL ?>">Accueil</a></h1>
     </header>
-    <?= $content ?>
+    <nav>
+       <?= $content ?>
+    </nav>
     <footer>
         <p>CONTRII</p>
     </footer>
