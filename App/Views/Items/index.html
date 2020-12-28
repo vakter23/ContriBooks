@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Items{% endblock %}
+
+{% block body %}
+
+    <h1>Items</h1>
+
+        <p>Here is the index of items.</p>
+<div>
+    <div><h2>LES MEILLEURS FILM</h2></div>
+
+    <div>
+        <ul class="list-group list-group-horizontal">
+            {% for books in book %}
+            <li class="list-group-item ">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/8130inT26AL.jpg" class="rounded mx-auto d-block w-25 p-55" alt="...">
+
+                {{ books.title_book }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div>
+
+</div>
+<!--{{ dump() }}-->
+
+{% endblock %}
