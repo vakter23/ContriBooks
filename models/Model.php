@@ -9,7 +9,7 @@ abstract class Model
 //         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARINNG);
 
         try {
-        self::$_bdd = new PDO('mysql:host=localhost;dbname=cms;charset=utf8','dvwadmin','ZcLyF5RfJ9mLJMjQ');
+        self::$_bdd = new PDO('mysql:host=localhost;dbname=contribooks;charset=utf8','dvwadmin','ZcLyF5RfJ9mLJMjQ');
           // set the PDO error mode to exception
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         } catch(PDOException $e) {

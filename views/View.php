@@ -35,6 +35,6 @@ class View
             return ob_get_clean();
         }
         else
-            throw new Exception('FIchier '.$file.' Introuvable');
+            throw new Exception('Fichier '.$file.' Introuvable');
     }
 }
