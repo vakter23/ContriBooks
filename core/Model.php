@@ -5,9 +5,6 @@ abstract class Model
 
     private static function setBdd()
     {
-//         self::$_bdd = new PDO('mysql:host=localhost;dbname=cms;charset=utf8','testeur','test1');
-//         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARINNG);
-
         try {
         self::$_bdd = new PDO('mysql:host=localhost;dbname=contribooks;charset=utf8','dvwadmin','ZcLyF5RfJ9mLJMjQ');
           // set the PDO error mode to exception
@@ -17,7 +14,7 @@ abstract class Model
         }
     }
 
-    protected function getBdd()
+    public static function getBdd()
     {
         if(self::$_bdd == null)
             self::setBdd();
@@ -27,7 +24,7 @@ abstract class Model
     protected function getAll($table,$obj)
     {
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM '.$table);
+        $req = $this->getBdd()->prepare('SELECT * FROM '.$table .';');
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
@@ -36,4 +33,16 @@ abstract class Model
         $req->closeCursor();
         return $var;
     }
+    protected function getWithParams($table,$params,$obj){
+        $var = [];
+        $req = $this->getBdd()->prepare('SELECT * FROM '.$table. ' ' . $params);
+        $req->execute();
+        while($data = $req->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new $obj($data);
+        }
+        $req->closeCursor();
+        return $var;
+    }
+
 }

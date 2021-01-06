@@ -1,5 +1,5 @@
 <?php
-require_once('views/View.php');
+require_once('core/View.php');
 class Routeur
 {
     private $_ctrl;
@@ -11,7 +11,12 @@ class Routeur
         {
             //Chargement automatique des classes
             spl_autoload_register(function($class){
-                require_once('models/'.$class.'.php');
+                if($class=='Model'){
+                    require_once('core/'.$class.'.php');
+                }
+                else{
+                    require_once('models/'.$class.'.php');
+                }
             });
 
             $url = '';

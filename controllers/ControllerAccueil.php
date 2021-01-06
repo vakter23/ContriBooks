@@ -1,5 +1,5 @@
 <?php
-require_once('views/View.php');
+require_once('core/View.php');
 
 class ControllerAccueil
 {
@@ -12,24 +12,17 @@ class ControllerAccueil
         if(isset($url) && count( array($url) )>1)
             throw new Exception('Page Introuvable');
         else
-//            $this->articles();
-              $this->books();
+              $this->newBooks();
     }
-    private function articles()
-    {
-        $this->_articleManager = new ArticleManager;
-        $articles = $this->_articleManager->getArticles();
-
-        $this->_view = new View('Accueil');
-        $this->_view->generate(array('articles' => $articles));
-    }
-    private function books()
+    private function newBooks()
     {
         $this->_bookManager = new BookManager;
-        $books = $this->_bookManager->getBooks();
+        $newBooks = $this->_bookManager->getNewFiveBooks();
 
         $this->_view = new View('Accueil');
-        $this->_view->generate(array('books' => $books));
+        $this->_view->generate(array('newBooks' => $newBooks));
 
     }
+
+
 }
