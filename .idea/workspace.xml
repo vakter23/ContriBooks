@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/CSS/styleAccueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Routeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Routeur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/0747532699.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/0747532699.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/2070612759jpg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2070612759jpg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/2294756290.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2294756290.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/2366584032.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2366584032.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/2723448126.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2723448126.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/2852581418.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2852581418.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/9780930289454.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/9780930289454.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/media/img/9782361064235.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/9782361064235.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +55,7 @@
       <recent name="C:\xampp\htdocs\Contribooks\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Contribooks\utils\media\img\book" />
       <recent name="C:\xampp\htdocs\Contribooks\views\CSS" />
       <recent name="C:\xampp\htdocs\Contribooks\views" />
       <recent name="C:\xampp\htdocs\Contribooks\core" />
@@ -90,7 +88,7 @@
       <workItem from="1609420221166" duration="7568000" />
       <workItem from="1609438007922" duration="3750000" />
       <workItem from="1609517492541" duration="996000" />
-      <workItem from="1609936024942" duration="358000" />
+      <workItem from="1609936024942" duration="804000" />
     </task>
     <task id="LOCAL-00003" summary="Add: Image">
       <created>1609345743051</created>
@@ -99,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609345743051</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Improve : Accueil">
+      <created>1609936507819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609936507820</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New: Add Books" />
     <MESSAGE value="Add: Image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: Image" />
+    <MESSAGE value="Improve : Accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve : Accueil" />
   </component>
 </project>
