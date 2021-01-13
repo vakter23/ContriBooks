@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ArticleManager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Book.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Connexion" />
+        <entry key="$PROJECT_DIR$" value="Accueil" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609936507820</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding model classes">
+      <created>1610541085526</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610541085526</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +138,7 @@
     <MESSAGE value="New: Add Books" />
     <MESSAGE value="Add: Image" />
     <MESSAGE value="Improve : Accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve : Accueil" />
+    <MESSAGE value="adding model classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding model classes" />
   </component>
 </project>

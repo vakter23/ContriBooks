@@ -2,13 +2,9 @@
 
 class UserManager extends Model
 {
-    public function getBooks()
+    public function getUsers()
     {
         return $this->getAll('user','Users');
-    }
-    public function getNewFiveBooks()
-    {
-        return $this->getWithParams('user','ORDER BY date_of_publication DESC LIMIT 5;','Users');
     }
 
 }

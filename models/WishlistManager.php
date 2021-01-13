@@ -2,13 +2,9 @@
 
 class WishlistManager extends Model
 {
-    public function getBooks()
+    public function getWishlist()
     {
         return $this->getAll('wishlist','Wishlist');
-    }
-    public function getNewFiveBooks()
-    {
-        return $this->getWithParams('wishlist','ORDER BY date_of_publication DESC LIMIT 5;','Wishlist');
     }
 
 }
