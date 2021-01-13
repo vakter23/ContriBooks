@@ -3,7 +3,6 @@ require_once('core/View.php');
 
 class ControllerAccueil
 {
-    private $_articleManager;
     private $_bookManager;
     private $_view;
 

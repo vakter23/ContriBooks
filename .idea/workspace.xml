@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/utils/media/img/0747532699.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/0747532699.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/2070612759jpg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2070612759jpg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/2294756290.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2294756290.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/2366584032.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2366584032.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/2723448126.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2723448126.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/2852581418.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/2852581418.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/9780930289454.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/9780930289454.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/media/img/9782361064235.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/utils/media/img/book/9782361064235.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ArticleManager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Book.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MVC_V2" />
+        <entry key="$PROJECT_DIR$" value="Connexion" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
