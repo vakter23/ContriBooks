@@ -11,7 +11,7 @@
 
             <li class="nav-item">
                 <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
-                <a class="nav-link" href="viewBook.php?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
+                <a class="nav-link" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
