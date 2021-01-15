@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +86,8 @@
       <workItem from="1609438007922" duration="3750000" />
       <workItem from="1609517492541" duration="996000" />
       <workItem from="1609936024942" duration="804000" />
+      <workItem from="1610639725132" duration="15059000" />
+      <workItem from="1610742562920" duration="599000" />
     </task>
     <task id="LOCAL-00003" summary="Add: Image">
       <created>1609345743051</created>
@@ -104,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610541085526</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Improve manager classes">
+      <created>1610555850927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610555850927</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +152,7 @@
     <MESSAGE value="Add: Image" />
     <MESSAGE value="Improve : Accueil" />
     <MESSAGE value="adding model classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding model classes" />
+    <MESSAGE value="Improve manager classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve manager classes" />
   </component>
 </project>

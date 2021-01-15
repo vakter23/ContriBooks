@@ -7,6 +7,7 @@ class View
     public function __construct($action)
     {
         $this->_file = 'views/view'.$action.'.php';
+        var_dump($this->_file);
     }
 
     public function generate($data)
@@ -22,7 +23,6 @@ class View
 
     private function generateFile($file,$data)
     {
-//             var_dump($this->file);
 
         if(file_exists($file))
         {

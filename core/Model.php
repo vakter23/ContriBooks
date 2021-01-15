@@ -1,7 +1,7 @@
 <?php
 abstract class Model
 {
-    private static $_bdd;
+    protected static $_bdd;
 
     private static function setBdd()
     {

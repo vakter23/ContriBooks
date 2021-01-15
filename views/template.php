@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -56,7 +57,15 @@
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
-                        <button class="btn btn-outline-info ml-5" type="button"> <a href="viewConnexion.php">Connexion</a></button>
+                    <?php
+                    if (isset($_SESSION['id']) && isset($_SESSION['login']))
+                    {
+                        echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
+                    }
+                    else {
+                        echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
+                    }
+                    ?>
                 </div>
             </nav>
 
