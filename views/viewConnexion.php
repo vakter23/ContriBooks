@@ -1,7 +1,5 @@
 <?php  $this->_t = 'Connexion'; ?>
 
-
-
 <div class="border border-1 mx-auto" style="width:300px">
     <form action="/ContriBooks/Connexion" accept-charset="UTF-8" method="post">
         <label for="login_field" class="">Pseudo</label>
@@ -14,4 +12,6 @@
         Nouveau sur Contribooks?
         <a href="Register">Create an account</a>.
     </p>
-</div>
+</div>'
+
+

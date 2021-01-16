@@ -58,12 +58,13 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <?php
-                    if (isset($_SESSION['id']) && isset($_SESSION['login']))
+                    if (isset($_SESSION['login']))
                     {
-                        echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
+                        echo'<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
                     }
                     else {
-                        echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
+                        echo '<button class="btn btn-outline-info ml-5" type="button"> <a href="/Contribooks/Connexion">Connexion</a></button>';
+                        //echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
                     }
                     ?>
                 </div>
