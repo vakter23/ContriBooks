@@ -1,7 +1,8 @@
 <?php  $this->_t = 'Contribooks'; ?>
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/
+jquery/3.5.1/jquery.min.js"></script>
 
 
 <div class="container">
@@ -47,11 +48,31 @@ if(isset($_POST['submit_commentaire'])){
 }?>
             <figure class="figure-review">
 
-                <form method="post">
-                    <input type="text" name="pseudo" placeholder="Votre Pseudo"/></br>
-                    <textarea name="commentaire" placeholder="Votre commentaire..."></textarea></br>
-                    <input type="submit" value="Poster mon commentaire" name="submit_commentaire">
-                </form></br>
+                <div class="post">
+                    <!-- post will be placed here from db -->
+                </div>
+                <div class="comment-block">
+                    <!-- comment will be apped here from db-->
+                </div>
+                <!-- comment form -->
+                <form id="form" method="post" action="Book?ISBN=<?= $ISBN ?>">
+                    <!-- need to supply post id with hidden fild -->
+                    <input type="hidden" name="postid" value="1">
+                    <label>
+                        <span>Name :</span>
+                        <input type="text" name="name" id="comment-name" placeholder="Your name here...." required>
+                    </label>
+                    <label>
+                        <span>Email :</span>
+                        <input type="email" name="mail" id="comment-mail" placeholder="Your mail here...." required>
+                    </label>
+                    <label>
+                        <span>Your comment :</span>
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment here...." required></textarea>
+                    </label>
+                    <input type="submit" id="submit" value="Submit Comment">
+                </form>
+
 
 
 
@@ -59,6 +80,8 @@ if(isset($_POST['submit_commentaire'])){
     echo $c_erreur; /*Il faut ajouter un moyen de dire que le commentaire est n'est pas passé*/
 }?>
 <?php
+//var_dump($_POST[""]);
+    //version php
     $i = 1;
     foreach ($reviews as $review ):
     echo ("Commentaire n°".$i." : ");

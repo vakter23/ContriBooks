@@ -1,11 +1,13 @@
 <?php
 require_once('core/View.php');
+require_once ('ControllerReview.php');
 
 class ControllerBook
 {
     private $_isbn;
     private $view;
     private $_bookManager;
+    private $_reviews;
 
     public function __construct($url)
     {
@@ -25,6 +27,7 @@ class ControllerBook
         $reviews = $this->_bookManager->getReviewsByISBN($this->_isbn[1]);
         //var_dump($book);
         $this->view = new View('Book');
+        //$this->_reviews = new ControllerReview($this->_isbn, $this->view);
         $this->view->generate(array('book' => $book, 'reviews' => $reviews));
 
     }
