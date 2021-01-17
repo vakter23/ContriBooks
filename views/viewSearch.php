@@ -1,6 +1,19 @@
 <?php  $this->_t = 'Search'; ?>
 
-
+<!--<div class="container">
+    <br />
+    <br />
+    <br />
+    <h2 align="center">Ajax Live Data Search using Jquery PHP MySql</h2><br />
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">Search</span>
+            <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+        </div>
+    </div>
+    <br />
+    <div id="result"></div>
+</div>-->
 <div>
     <div class="d-inline">
         <select class="dropdown-select-inner" id="selectGenre">
@@ -17,7 +30,6 @@
         </select>
     </div>
     <div class="d-inline">
-        <h2><a>Nouveautés</a></h2>
         <ul class="nav justify-content-center mw-25">
             <?php foreach($newBooks as $book): ?>
                 <?php $ISBN = $book->getISBN();
@@ -32,8 +44,39 @@
         </ul>
     </div>
 </div>
-
+<!--
 <script>
+    $(document).ready(function(){
+        load_data();
+        function load_data(query)
+        {
+            $.ajax({
+                url:"controllers/ControllerSearch",
+                method:"post",
+                data:{query:query},
+                success:function(data)
+                {
+                    $('#result').html(data);
+                }
+            });
+        }
+
+        $('#search_text').keyup(function(){
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
+            }
+        });
+    });
+</script>
+-->
+
+<script type="text/javascript">
 
     const books = document.querySelectorAll('.book-list');
     let filters = [null, null, null];

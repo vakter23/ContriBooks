@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="views/CSS/styleAccueil.css">
         <title><?= $t ?></title>
@@ -52,9 +55,16 @@
                         </li>
 
                     </ul>
-                    <form class="form-inline my-2 my-lg-0" action="/ContriBooks/Search">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <form class="form-inline my-2 my-lg-0" action="/ContriBooks/Search" method="post">
+                        <div style="width: 700px;margin:40px auto;">
+                            <div id="search-box-container" >
+                                <input  type="text" id="search-data" name="query" placeholder="Search By Post Title (word length should be greater than 3) ..." autocomplete="off" />
+                            </div>
+                            <div id="search-result-container" style="border:solid 1px #BDC7D8;display:none; ">
+                            </div>
+                        </div>
+                        <!--<input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">-->
+                        <input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0">
                     </form>
                         <button class="btn btn-outline-info ml-5" type="button"> <a href="viewConnexion.php">Connexion</a></button>
                 </div>
@@ -99,10 +109,9 @@
             <div class="row">
                 <div class="">
                     <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved to
-                    <a href="#">Djibril QUENUM-SANFO</a>
-                    <a href="#">Volkan AKTER</a>
-                    <a href="#">William ROUSSEAU</a>
-
+                        <a href="#">Djibril QUENUM-SANFO</a>
+                        <a href="#">Volkan AKTER</a>
+                        <a href="#">William ROUSSEAU</a>
                     </p>
                 </div>
 
@@ -140,8 +149,72 @@
 <!--        <!-- Copyright -->-->
 <!--    </footer>-->
     <!-- Footer -->    </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 </html>
+
+<style>
+    #search-data{
+        padding: 10px;
+        border: solid 1px #BDC7D8;
+        margin-bottom: 20px;
+        display: inline;
+        width: 100%;
+    }
+    .search-result{
+        border-bottom:solid 1px #BDC7D8;
+        padding:10px;
+        font-family:Times New Roman;
+        font-size: 20px;
+        color:blue;
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+            $('#search-data').unbind().keyup(function(e) {
+                    var value = $(this).val();
+                    if (value.length>3) {
+                        //alert(99933);
+                        searchData(value);
+                    }
+                    else {
+                        $('#search-result-container').hide();
+                    }
+                }
+            );
+        }
+    );
+    function searchData(val){
+        $('#search-result-container').show();
+        $('#search-result-container').html('<div><img src="preloader.gif" width="50px;" height="50px"> <span style="font-size: 20px;">Please Wait...</span></div>');
+        /*$.post('controllers/controllerTemplate.php',{'search-data': val}, function(data){
+                console.log("lol");
+                if(data != "") {
+                    $('#search-result-container').html(data);
+                    console.log("lolIF");
+                }
+                else {
+                    $('#search-result-container').html(data);
+                    //$('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
+                    console.log("lolELSE");
+                }
+        }).fail(function(xhr, ajaxOptions, thrownError) {
+                //any errors?
+                alert(thrownError);
+                //alert with HTTP error
+            });*/
+        $.ajax({
+            type: "POST",
+            url: "controllers/controllerTemplate.php",
+            data: 'search-data=' + val,
+            beforeSend: function () {
+                $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
+            },
+            success: function (data) {
+                $('#search-result-container').html(data);
+            },
+            error: function (data) {
+                $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
+            }
+        })
+    }
+</script>
