@@ -1,1 +1,3 @@
-<?php echo $errorMsg ?>
+<div class="container">
+    <?php echo $errorMsg ?>
+</div>

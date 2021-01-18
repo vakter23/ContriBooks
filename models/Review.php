@@ -28,12 +28,12 @@ class Review
         }
     }
 
-    public function getIdReview()
+    public function getId_review()
     {
         return $this->_id_review;
     }
 
-    public function setIdReview($id_review)
+    public function setId_review($id_review)
     {
         $this->_id_review = $id_review;
     }
@@ -48,12 +48,12 @@ class Review
         $this->_ISBN = $ISBN;
     }
 
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->_id_user;
     }
 
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->_id_user = $id_user;
     }

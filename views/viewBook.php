@@ -1,9 +1,6 @@
 <?php  $this->_t = 'Contribooks'; ?>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
 <div class="container">
     <h2><a>Nouveautés</a></h2>
     <ul class="nav justify-content-center mw-25">

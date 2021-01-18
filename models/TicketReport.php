@@ -28,22 +28,22 @@ class TicketReport
         }
     }
 
-    public function getIdTicketReport()
+    public function getId_ticket_report()
     {
         return $this->_id_ticket_report;
     }
 
-    public function setIdTicketReport($id_ticket_report)
+    public function setId_ticket_report($id_ticket_report)
     {
         $this->_id_ticket_report = $id_ticket_report;
     }
 
-    public function getIdUserSend()
+    public function getId_user_send()
     {
         return $this->_id_user_send;
     }
 
-    public function setIdUserSend($id_user_send)
+    public function setId_user_send($id_user_send)
     {
         $this->_id_user_send = $id_user_send;
     }
@@ -58,42 +58,42 @@ class TicketReport
         $this->_ISBN = $ISBN;
     }
 
-    public function getIdReview()
+    public function getId_review()
     {
         return $this->_id_review;
     }
 
-    public function setIdReview($id_review)
+    public function setId_review($id_review)
     {
         $this->_id_review = $id_review;
     }
 
-    public function getIdUserTarget()
+    public function getId_user_target()
     {
         return $this->_id_user_target;
     }
 
-    public function setIdUserTarget($id_user_target)
+    public function setId_user_target($id_user_target)
     {
         $this->_id_user_target = $id_user_target;
     }
 
-    public function getTitleReport()
+    public function getTitle_report()
     {
         return $this->_title_report;
     }
 
-    public function setTitleReport($title_report)
+    public function setTitle_report($title_report)
     {
         $this->_title_report = $title_report;
     }
 
-    public function getReasonReport()
+    public function getReason_report()
     {
         return $this->reason_report;
     }
 
-    public function setReasonReport($reason_report)
+    public function setReason_report($reason_report)
     {
         $this->reason_report = $reason_report;
     }

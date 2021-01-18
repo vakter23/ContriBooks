@@ -50,7 +50,6 @@ class UserManager extends Model
                     $id = $user->getId_user();
                     $_SESSION['id'] = $id;
                     $_SESSION['login'] = $login;
-                    var_dump($_SESSION);
                     echo 'Vous êtes connecté !';
                     return true;
                 }

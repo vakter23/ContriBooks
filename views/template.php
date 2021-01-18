@@ -4,7 +4,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -33,17 +32,13 @@
                             <a class="dropdown-item" href="/ContriBooks/Search?filter=Sciences">Sciences</a>
                             <a class="dropdown-item" href="/ContriBooks/Search?filter=BD">BD</a>
                             <a class="dropdown-item" href="/ContriBooks/Search?filter=Roman">Roman</a>
-
-<!--                            <div class="dropdown-divider"> </div>-->
-<!--                            <a class="dropdown-item" href="#">Something else here</a>-->
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="mx-auto order-0">
                 <!--                    <a class="navbar-brand mx-auto" href="#">Navbar 2</a>-->
-                <a class="navbar-brand mx-auto" href="<?= URL ?>"><img style="width: 200px;"
-                                                                       src="utils/media/img/LOGO.png"></a>
+                <a class="navbar-brand mx-auto" href="<?= URL ?>"><img style="width: 200px;" src="utils/media/img/LOGO.png"></a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
@@ -53,35 +48,26 @@
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
                     <form class="form-inline my-2 my-lg-0" action="/ContriBooks/Search" method="post">
-                        <div style="width: 700px;margin:40px auto;">
-                            <div id="search-box-container" >
-                                <input  type="text" id="search-data" name="query" placeholder="Search By Post Title (word length should be greater than 3) ..." autocomplete="off" />
-                            </div>
-                            <div id="search-result-container" style="border:solid 1px #BDC7D8;display:none; ">
-                            </div>
+                        <input  class="form-control mr-sm-2" type="text" id="search-data" name="query" placeholder="Search By Post Title (word length should be greater than 3) ..." autocomplete="off" />
+                        <div id="search-result-container" style="border:solid 1px #BDC7D8;display:none; ">
                         </div>
-                        <!--<input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">-->
                         <input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0">
                     </form>
                     <li class="nav-item">
-                        <!--                        <a class="nav-link" href="#">Right</a>-->
                         <?php
                         if (isset($_SESSION['login']))
                         {
                             echo'<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
                         }
                         else {
-                            echo '<button class="btn btn-outline-info ml-5" type="button"> <a href="/Contribooks/Connexion">Connexion</a></button>';
+                            echo '<a href="/Contribooks/Connexion" class="btn btn-outline-light" role="button">Connexion</a>';
                             //echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
                         }
                         ?>
                     </li>
-
                 </ul>
             </div>
         </nav>
-
-
     </header>
 </div>
 
@@ -91,39 +77,34 @@
 <!-- Site footer -->
 
 <!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
+<footer class="text-center text-lg-start text-light" style="background-color: #0151BF">
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->
         <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Footer Content</h5>
+                <h5 class="text-uppercase">Contribooks</h5>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
+                    Contribooks est un projet réalisé pour le S3 de DUT INFORMATIQUE à Montreuil
                 </p>
             </div>
             <!--Grid column-->
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+                <h5 class="text-uppercase">Liens importants</h5>
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="#!" class="text-dark">Link 1</a>
+                        <a href="/Contribooks/Accueil" class="text-light">Accueil</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Link 2</a>
+                        <a href="/Contribooks/BestBooks" class="text-light">Meilleurs livres</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 4</a>
+                        <a href="/Contribooks/NewBooks" class="text-light">Nouveautés</a>
                     </li>
                 </ul>
             </div>
@@ -131,20 +112,17 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-0">Links</h5>
+                <h5 class="text-uppercase">Un problème</h5>
 
-                <ul class="list-unstyled">
+                <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="#!" class="text-dark">Link 1</a>
+                        <a href="/Contribooks/Contact" class="text-light">Contactez nous</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Link 2</a>
+                        <a href="/Contribooks/Rules" class="text-light">Réglement</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 4</a>
+                        <a href="/Contribooks/EnquireBook" class="text-light">Demande d'ajout de livres</a>
                     </li>
                 </ul>
             </div>
@@ -156,8 +134,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2021 Copyright: AKTER Volkan | QUENUM-SANFO Djibril | ROUSSEAU William
     </div>
     <!-- Copyright -->
 </footer>
@@ -188,7 +165,7 @@
             $('#search-data').unbind().keyup(function(e) {
                     var value = $(this).val();
                     if (value.length>3) {
-                        //alert(99933);
+                        console.log(value)
                         searchData(value);
                     }
                     else {
@@ -201,28 +178,28 @@
     function searchData(val){
         $('#search-result-container').show();
         $('#search-result-container').html('<div><img src="preloader.gif" width="50px;" height="50px"> <span style="font-size: 20px;">Please Wait...</span></div>');
-       $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
-                console.log("lol");
-                if(data != "") {
-                    $('#search-result-container').html(data);
-                    console.log("lolIF");
-                }
-                else {
-                    $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
-                    console.log("lolELSE");
-                }
+        $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
+            console.log("lol");
+            if(data != "") {
+                $('#search-result-container').html(data);
+                console.log("lolIF");
+            }
+            else {
+                $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
+                console.log("lolELSE");
+            }
         }).fail(function(xhr, ajaxOptions, thrownError) {
-                //any errors?
-                alert(thrownError);
-                //alert with HTTP error
-            });
+            //any errors?
+            alert(thrownError);
+            //alert with HTTP error
+        });
         // $.ajax({
         //     type: "POST",
         //     url: "controllers/controllerTemplate.php",
         //     data: 'query=' + val,
-        //     /*beforeSend: function () {
+        //     /beforeSend: function () {
         //         $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-        //     },*/
+        //     },/
         //     success: function(data) {
         //         console.log("success");
         //         $('#search-result-container').html(data);
@@ -232,4 +209,5 @@
         //     }
         // })
     }
-</script>
+
+    </script>

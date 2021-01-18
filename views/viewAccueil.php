@@ -7,9 +7,11 @@
             <?php $ISBN = $book->getISBN();
             $img_link = "$ISBN".'.jpg';
             $filename = 'utils/media/img/book/'.$img_link;
+            if(!file_exists('utils/media/img/book/'.$img_link))$filename='utils/media/img/book/NotFound.jpg';
             ?>
 
             <li class="nav-item">
+<!--                <img src="--><?//= $filename ?><!--" alt="..." class="img-thumbnail" width="100px;" height="100px;">-->
                 <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
                 <a class="nav-link active" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
             </li>
@@ -23,6 +25,8 @@
             <?php $ISBN = $book->getISBN();
             $img_link = "$ISBN".'.jpg';
             $filename = 'utils/media/img/book/'.$img_link;
+            if(!file_exists('utils/media/img/book/'.$img_link))$filename='utils/media/img/book/NotFound.jpg';
+
             ?>
 
             <li class="nav-item">

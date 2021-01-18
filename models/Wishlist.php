@@ -24,22 +24,22 @@ class Wishlist
         }
     }
 
-    public function getIdWishlist()
+    public function getId_wishlist()
     {
         return $this->_id_wishlist;
     }
 
-    public function setIdWishlist($id_wishlist)
+    public function setId_wishlist($id_wishlist)
     {
         $this->_id_wishlist = $id_wishlist;
     }
 
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->_id_user;
     }
 
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->_id_user = $id_user;
     }

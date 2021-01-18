@@ -12,7 +12,8 @@ class ControllerSearch
             throw new Exception('Page Introuvable');
         else {
             $this->_bookManager = new BookManager;
-            if (isset($_GET['filter'])) {
+            $filter = explode('=', $_SERVER['REQUEST_URI']);
+            if (isset($filter)) {
                 $newBooks = $this->_bookManager->getBooks();
             }
             else {

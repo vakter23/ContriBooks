@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/media/img/book/NotFound.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ReviewManager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TicketBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TicketReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Wishlist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewError.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewError.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewSearch.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +42,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1mNTVTNa1ikAlMy1ynikeupcTZ3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils/media/img/book" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -47,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ContriBooks\utils\media\img\book" />
       <recent name="C:\xampp\htdocs\Contribooks\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -85,6 +107,7 @@
       <workItem from="1609438007922" duration="3750000" />
       <workItem from="1609517492541" duration="996000" />
       <workItem from="1609936024942" duration="804000" />
+      <workItem from="1610973555831" duration="8509000" />
     </task>
     <task id="LOCAL-00003" summary="Add: Image">
       <created>1609345743051</created>
@@ -114,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610968867116</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fusion: part 2">
+      <created>1610969690397</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610969690397</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +180,7 @@
     <MESSAGE value="Improve : Accueil" />
     <MESSAGE value="adding model classes" />
     <MESSAGE value="Fusion: part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fusion: part 1" />
+    <MESSAGE value="Fusion: part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fusion: part 2" />
   </component>
 </project>

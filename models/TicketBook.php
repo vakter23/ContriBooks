@@ -28,22 +28,22 @@ class TicketBook
         }
     }
 
-    public function getIdTicketBook()
+    public function getId_ticket_book()
     {
         return $this->_id_ticket_book;
     }
 
-    public function setIdTicketBook($id_ticket_book)
+    public function setId_ticket_book($id_ticket_book)
     {
         $this->_id_ticket_book = $id_ticket_book;
     }
 
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->_id_user;
     }
 
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->_id_user = $id_user;
     }
@@ -58,32 +58,32 @@ class TicketBook
         $this->_ISBN = $ISBN;
     }
 
-    public function getTitleBook()
+    public function getTitle_book()
     {
         return $this->_title_book;
     }
 
-    public function setTitleBook($title_book)
+    public function setTitle_book($title_book)
     {
         $this->_title_book = $title_book;
     }
 
-    public function getSynopsisBook()
+    public function getSynopsis_book()
     {
         return $this->_synopsis_book;
     }
 
-    public function setSynopsisBook($synopsis_book)
+    public function setSynopsis_book($synopsis_book)
     {
         $this->_synopsis_book = $synopsis_book;
     }
 
-    public function getDateOfCreation()
+    public function getDate_of_creation()
     {
         return $this->_date_of_creation;
     }
 
-    public function setDateOfCreation($date_of_creation)
+    public function setDate_of_creation($date_of_creation)
     {
         $this->_date_of_creation = $date_of_creation;
     }
