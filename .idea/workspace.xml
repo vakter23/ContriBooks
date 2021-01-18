@@ -4,9 +4,9 @@
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ControllerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewSearch.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +89,8 @@
       <workItem from="1609936024942" duration="804000" />
       <workItem from="1610368098925" duration="9149000" />
       <workItem from="1610531148331" duration="953000" />
+      <workItem from="1610904896835" duration="6936000" />
+      <workItem from="1610960597996" duration="1289000" />
     </task>
     <task id="LOCAL-00003" summary="Add: Image">
       <created>1609345743051</created>

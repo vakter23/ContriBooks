@@ -186,15 +186,14 @@
     function searchData(val){
         $('#search-result-container').show();
         $('#search-result-container').html('<div><img src="preloader.gif" width="50px;" height="50px"> <span style="font-size: 20px;">Please Wait...</span></div>');
-        /*$.post('controllers/controllerTemplate.php',{'search-data': val}, function(data){
+       /* $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
                 console.log("lol");
                 if(data != "") {
                     $('#search-result-container').html(data);
                     console.log("lolIF");
                 }
                 else {
-                    $('#search-result-container').html(data);
-                    //$('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
+                    $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
                     console.log("lolELSE");
                 }
         }).fail(function(xhr, ajaxOptions, thrownError) {
@@ -205,14 +204,15 @@
         $.ajax({
             type: "POST",
             url: "controllers/controllerTemplate.php",
-            data: 'search-data=' + val,
-            beforeSend: function () {
+            data: 'query=' + val,
+            /*beforeSend: function () {
                 $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-            },
-            success: function (data) {
+            },*/
+            success: function(data) {
+                console.log("success");
                 $('#search-result-container').html(data);
             },
-            error: function (data) {
+            error: function() {
                 $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
             }
         })
