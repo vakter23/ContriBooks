@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -54,7 +55,16 @@
                                         </form>
                     <li class="nav-item">
                         <!--                        <a class="nav-link" href="#">Right</a>-->
-                        <a href="/Contribooks/Connexion" class="btn btn-outline-light" role="button">Connexion</a>
+                        <?php
+                        if (isset($_SESSION['login']))
+                        {
+                            echo'<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
+                        }
+                        else {
+                            echo '<button class="btn btn-outline-info ml-5" type="button"> <a href="/Contribooks/Connexion">Connexion</a></button>';
+                            //echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
+                        }
+                        ?>
                     </li>
 
                 </ul>
