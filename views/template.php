@@ -163,15 +163,6 @@
 </footer>
 <!-- Footer -->
   </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
 
 </html>
 
@@ -210,7 +201,7 @@
     function searchData(val){
         $('#search-result-container').show();
         $('#search-result-container').html('<div><img src="preloader.gif" width="50px;" height="50px"> <span style="font-size: 20px;">Please Wait...</span></div>');
-       /* $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
+       $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
                 console.log("lol");
                 if(data != "") {
                     $('#search-result-container').html(data);
@@ -224,21 +215,21 @@
                 //any errors?
                 alert(thrownError);
                 //alert with HTTP error
-            });*/
-        $.ajax({
-            type: "POST",
-            url: "controllers/controllerTemplate.php",
-            data: 'query=' + val,
-            /*beforeSend: function () {
-                $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-            },*/
-            success: function(data) {
-                console.log("success");
-                $('#search-result-container').html(data);
-            },
-            error: function() {
-                $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
-            }
-        })
+            });
+        // $.ajax({
+        //     type: "POST",
+        //     url: "controllers/controllerTemplate.php",
+        //     data: 'query=' + val,
+        //     /*beforeSend: function () {
+        //         $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
+        //     },*/
+        //     success: function(data) {
+        //         console.log("success");
+        //         $('#search-result-container').html(data);
+        //     },
+        //     error: function() {
+        //         $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
+        //     }
+        // })
     }
 </script>
