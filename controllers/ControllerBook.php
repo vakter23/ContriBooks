@@ -9,27 +9,25 @@ class ControllerBook
 
     public function __construct($url)
     {
-        //$url = 2294756290;
-
         if(isset($url) && count( array($url) )>1)
-            throw new Exception('Page Introuvable');
+            throw new Exception('Page Livre Introuvable');
         else {
             $this->_isbn = explode('=', $_SERVER['REQUEST_URI']);
-            $this->getBook();
+            $this->_bookManager = new BookManager;
+            $this->view = new View('Book');
+            $book = $this->_bookManager->getBookByISBN($this->_isbn[1]);
+            $reviews = $this->_bookManager->getReviewsByISBN($this->_isbn[1]);
+            $this->view->generate(array('book' => $book, 'reviews' => $reviews));
+            if (isset($_POST["score"]) && isset($_POST["comment"])) {
+                $this->postComment();
+            }
         }
     }
+    /*formulaire vers ajax, ajax redirige vers controleur, controleur verifie post et envoie vers modele, modele envoie vers bd*/
 
-    private function getBook(){
-        $this->_bookManager = new BookManager;
-        $book = $this->_bookManager->getBookByISBN($this->_isbn[1]);
-        $reviews = $this->_bookManager->getReviewsByISBN($this->_isbn);
-        //var_dump($book);
-        $this->view = new View('Book');
-        $this->view->generate(array('book' => $book, 'reviews' => $reviews));
-
+    private function postComment()
+    {
+        $this->_bookManager->addComment($this->_isbn[1]);
     }
 
-private function getHttp(){
-
-}
 }
