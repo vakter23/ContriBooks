@@ -44,19 +44,14 @@ abstract class Model
         $req->closeCursor();
         return $var;
     }
-    protected function addWithParams($table,$params,$obj){
+    protected function addWithParams($table,$params){
         // Les paramètres demandés sont les valeurs qu'il faut ajouter dans la bdd
         // La table, la table ou il faut l'ajouter + les tuples qu'on ajoute
         // l'obj, l'objet qu'on cherche a créer
-        $var = [];
-        $req = $this->getBdd()->prepare('INSERT INTO '.$table. ' VALUES ' . $params);
+        $req = $this->getBdd()->prepare('INSERT INTO '.$table. ' ,id_user) VALUES( ' . $params. ',\'9\');');
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
-            $var[] = new $obj($data);
-        }
         $req->closeCursor();
-        echo "done";
+        echo "comment added";
     }
 
 }
