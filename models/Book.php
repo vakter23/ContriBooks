@@ -12,6 +12,7 @@ class Book
     private $_date_of_publication;
     private $_cover_book;
     private $_synopsis_book;
+    private $_rate;
 
     public function __construct(array $data)
     {
@@ -29,6 +30,15 @@ class Book
         }
     }
 
+    public function getRate()
+    {
+        return $this->_rate;
+    }
+
+    public function setRate($rate)
+    {
+        $this->_rate = $rate;
+    }
 
     public function getISBN()
     {

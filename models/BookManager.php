@@ -14,6 +14,11 @@ class BookManager extends Model
         $query = $_POST['query'];
         return $this->getWithParams('book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
     }
+
+    public function getTop50(){
+        return $this->getWithParams('book', 'ORDER BY RATE DESC LIMIT 50', 'Book');
+    }
+    
     public function getBookByISBN($ISBN){
         return $this->getWithParams('book', 'WHERE ISBN = '.$ISBN.';', 'Book');
     }

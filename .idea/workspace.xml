@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/media/img/book/NotFound.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ReviewManager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketReport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewError.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewError.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewSearch.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Accueil" />
+        <entry key="$PROJECT_DIR$" value="Fusion" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
