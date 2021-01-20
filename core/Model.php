@@ -48,10 +48,9 @@ abstract class Model
         // Les paramètres demandés sont les valeurs qu'il faut ajouter dans la bdd
         // La table, la table ou il faut l'ajouter + les tuples qu'on ajoute
         // l'obj, l'objet qu'on cherche a créer
-        $req = $this->getBdd()->prepare('INSERT INTO '.$table. ' ,id_user) VALUES( ' . $params. ',\'9\');');
+        $req = $this->getBdd()->prepare('INSERT INTO '.$table.' VALUES (' . $params. ');');
         $req->execute();
         $req->closeCursor();
-        echo "comment added";
     }
 
 }

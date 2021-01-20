@@ -9,12 +9,14 @@
             $filename = 'utils/media/img/book/'.$img_link;
             if(!file_exists('utils/media/img/book/'.$img_link))$filename='utils/media/img/book/NotFound.jpg';
             ?>
-
-            <li class="nav-item">
-<!--                <img src="--><?//= $filename ?><!--" alt="..." class="img-thumbnail" width="100px;" height="100px;">-->
-                <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
-                <a class="nav-link active" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
-            </li>
+            <ul class="list-inline text-center align-items-center">
+                <ul class="list-inline text-center align-items-center">
+                    <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
+                </ul>
+                <ul class="list-inline text-center align-items-center">
+                    <a class="nav-link active" style="font-size: 14px;" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= substr($book->getTitle_book(),0,40) ?></a>
+                </ul>
+            </ul>
         <?php endforeach; ?>
     </ul>
 </div>

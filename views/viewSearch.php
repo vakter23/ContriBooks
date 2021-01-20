@@ -1,36 +1,64 @@
 <?php  $this->_t = 'Search'; ?>
 
-<div>
-    <div class="d-inline">
-        <select class="dropdown-select-inner" id="selectGenre">
-            <option value="0">Par genres</option>
-            <option value="2">BD</option>
-            <option value="1">Roman</option>
-            <option value="9">Sciences</option>
-        </select>
-        <select class="dropdown-select-inner" id="selectType">
-            <option value="0">Par Types</option>
-            <option value="1">Fantastique</option>
-            <option value="2">Comics</option>
-            <option value="9">Biologie</option>
-        </select>
+<div class="container">
+<div class="row">
+    <div class="col-6 col-md-4">
+        <div class="filter-sidebar">
+            <div class="row card-body py-2 mb-3 twhite" style="background-color: #0151BF;padding-top: 25px;">
+                <h4 class="text-light">Search Options</h4>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="selectGenre">
+                    <option value="0">Par genres</option>
+                    <option value="2">BD</option>
+                    <option value="1">Roman</option>
+                    <option value="9">Sciences</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="selectType">
+                    <option value="0">Par Types</option>
+                    <option value="1">Fantastique</option>
+                    <option value="2">Comics</option>
+                    <option value="9">Biologie</option>
+                </select>
+            </div>
+            <hr>
+            <button type="btn" class="btn btn-primary">Find Now</button>
+            <button type="btn" class="btn btn-primary">Reset All</button>
+            <div class="pb-3"></div>
+        </div>
     </div>
-    <div class="d-inline">
-        <ul class="nav justify-content-center mw-25">
+    <div class="col-12 col-md-8">
+        <div class="d-flex flex-column">
             <?php foreach($newBooks as $book): ?>
                 <?php $ISBN = $book->getISBN();
                 $img_link = "$ISBN".'.jpg';
                 $filename = 'utils/media/img/book/'.$img_link;
+                if(!file_exists($filename)) $filename = 'utils/media/img/book/NotFound.jpg';
                 ?>
-                <li class="nav-item book-list" genre="<?= $book->getId_genre()?>" type="<?= $book->getId_type()?>" author="<?= $book->getId_author()?>" style="display:block;">
-                    <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
-                    <a class="nav-link" href="viewBook.php?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+                <div class="p-2 nav-item book-list" genre="<?= $book->getId_genre()?>" type="<?= $book->getId_type()?>" author="<?= $book->getId_author()?>"">
+                    <div class="row border border-primary" style="background-color: #B9C6CE">
+                        <div class="col border-right border-primary">
+                            <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 200px">
+                        </div>
+                        <div class="col-6">
+                            <a class="font-weight-bold" style="font-size: 20px;" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $book->getTitle_book() ?></a>
+                            <p style="font-size: 15px;">
+                                <?= mb_strimwidth($book->getSynopsis_book(), 0, 240," ..."); ?>
+                            </p>
+                        </div>
+                        <div class="col text-center ">
+                            <p class="border border-primary rounded-circle" style="font-size: 55px; margin-top: 55px;padding: 10px;"><?= $book->getRate() ?></p>
+                        </div>
+                    </div>
+
+                </div>
+         <?php endforeach; ?>
+        </div>
     </div>
 </div>
-
+</div>
 <script type="text/javascript">
 
     const books = document.querySelectorAll('.book-list');

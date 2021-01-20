@@ -12,6 +12,7 @@ class Book
     private $_date_of_publication;
     private $_cover_book;
     private $_synopsis_book;
+    private $_rate;
 
     public function __construct(array $data)
     {
@@ -107,6 +108,15 @@ class Book
     public function setSynopsis_book($synopsis_book)
     {
         $this->_synopsis_book = $synopsis_book;
+    }
+
+    public function getRate()
+    {
+        return $this->_rate;
+    }
+    public function setRate($rate)
+    {
+        $this->_rate = $rate;
     }
 
 }

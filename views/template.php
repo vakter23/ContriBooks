@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -11,9 +10,9 @@
         <title><?= $t ?></title>
     </head>
 
-<body>
+<body class="">
 <div style="background-color: #0151BF;" class="">
-    <header style="padding-top: 10px;" class="Primary container">
+    <header style="padding-top: 10px;" class="container">
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
@@ -37,21 +36,18 @@
                 </ul>
             </div>
             <div class="mx-auto order-0">
-                <!--                    <a class="navbar-brand mx-auto" href="#">Navbar 2</a>-->
                 <a class="navbar-brand mx-auto" href="<?= URL ?>"><img style="width: 200px;" src="utils/media/img/LOGO.png"></a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
                     <form class="form-inline my-2 my-lg-0" action="/ContriBooks/Search" method="post">
-                        <input  class="form-control mr-sm-2" type="text" id="search-data" name="query" placeholder="Search By Post Title (word length should be greater than 3) ..." autocomplete="off" />
+                        <input  class="form-control mr-sm-2" type="text" id="search-data" name="query" placeholder="Search" autocomplete="off" />
+                        <input type="submit" value="Search" class="btn btn-outline-success">
                         <div id="search-result-container" style="border:solid 1px #BDC7D8;display:none; ">
                         </div>
-                        <input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0">
                     </form>
                     <li class="nav-item">
                         <?php
