@@ -119,13 +119,4 @@ class Book
         $this->_synopsis_book = $synopsis_book;
     }
 
-    public function getRate()
-    {
-        return $this->_rate;
-    }
-    public function setRate($rate)
-    {
-        $this->_rate = $rate;
-    }
-
 }
