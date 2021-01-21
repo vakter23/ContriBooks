@@ -1,4 +1,4 @@
-<?php  $this->_t = 'Contribooks'; ?>
+<?php  $this->_t = 'Accueil'; ?>
 
 <div class="container">
     <h2><a>Nouveautés</a></h2>

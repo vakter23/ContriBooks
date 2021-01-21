@@ -1,6 +1,7 @@
-<?php ?>
+<?php  $this->_t = 'Contact'; ?>
 
 <div class="container p-5">
+    <h1 class="font-weight-bold">Contact</h1>
     <form method="POST" action="/Contribooks/Contact">
         <div><label>Votre nom:</label></div>
         <div><input type="text" name="Name" class="form-control" required/></div>
