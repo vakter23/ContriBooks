@@ -15,7 +15,7 @@
         <title><?= $t ?></title>
     </head>
 
-<body class="">
+<body>
 <div style="background-color: #0151BF;" class="">
     <header style="padding-top: 10px;" class="container">
         <nav class="navbar navbar-expand-md navbar-dark">
@@ -59,10 +59,11 @@
                         if (isset($_SESSION['login']))
                         {
                             echo'<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
+                            echo '</br>';
+                            echo '<form action="/ContriBooks/Profile?user='.$_SESSION["id"].'" method="post"><input type="submit" name="profile" value="Profil" class="btn btn-outline-info ml-5"></form>';
                         }
                         else {
                             echo '<a href="/Contribooks/Connexion" class="btn btn-outline-light" role="button">Connexion</a>';
-                            //echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
                         }
                         ?>
                     </li>
@@ -102,7 +103,7 @@
                         <a href="/Contribooks/Accueil" class="text-light">Accueil</a>
                     </li>
                     <li>
-                        <a href="/Contribooks/BestBooks" class="text-light">Meilleurs livres</a>
+                        <a href="/Contribooks/Rating" class="text-light">Meilleurs livres</a>
                     </li>
                     <li>
                         <a href="/Contribooks/NewBooks" class="text-light">Nouveautés</a>
@@ -161,39 +162,3 @@
     }
 </style>
 
-<script>
-    $(document).ready(function() {
-            $('#search-data').unbind().keyup(function(e) {
-                    var value = $(this).val();
-                    if (value.length>3) {
-                        console.log(value)
-                        searchData(value);
-                    }
-                    else {
-                        $('#search-result-container').hide();
-                    }
-                }
-            );
-        }
-    );
-    function searchData(val){
-        $('#search-result-container').show();
-        $('#search-result-container').html('<div><img src="preloader.gif" width="50px;" height="50px"> <span style="font-size: 20px;">Please Wait...</span></div>');
-        $.post('controllers/controllerTemplate.php',{'query': val}, function(data){
-            console.log("lol");
-            if(data != "") {
-                $('#search-result-container').html(data);
-                console.log("lolIF");
-            }
-            else {
-                $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
-                console.log("lolELSE");
-            }
-        }).fail(function(xhr, ajaxOptions, thrownError) {
-            //any errors?
-            alert(thrownError);
-            //alert with HTTP error
-        });
-    }
-
-    </script>

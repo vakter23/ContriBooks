@@ -1,22 +1,34 @@
-<?php  $this->_t = 'Contribooks'; ?>
+<?php $this->_t = 'Contribooks'; ?>
 
 
 <div class="container">
-    <h2><a>Nouveautés</a></h2>
-    <ul class="nav justify-content-center mw-25">
 
-        <?php foreach ($book as $livre ):
-            $ISBN = $livre->getISBN();
-            $img_link = "$ISBN".'.jpg';
-            $filename = 'utils/media/img/book/'.$img_link;
-            ?>
+
+    <?php foreach ($book
+
+    as $livre):
+    $ISBN = $livre->getISBN(); ?>
+
+    <ul class="nav justify-content-center mw-25">
+        <?php
+        $img_link = "$ISBN" . '.jpg';
+        $filename = 'utils/media/img/book/' . $img_link;
+        ?>
 
         <?php endforeach; ?>
-        <li class="nav-item">
-            <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
-            <a class="nav-link" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $livre->getTitle_book() ?></a>
-        </li>
+        <?php foreach ($authors as $author):
+            ?>
 
+            <li class="nav-item">
+                <h2><a class="nav-link" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $livre->getTitle_book() ?></a>
+                </h2>
+                <h3> Écrit par : <a
+                            href="/Contribooks/Author?author=<?= $author->getId_author() ?>"><?= $author->getFirst_name_author(); ?> <?= $author->getLast_name_author(); ?></a>
+                </h3>
+                <p>  <?= $livre->getSynopsis_book() ?> </p>
+                <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
+            </li>
+        <?php endforeach; ?>
     </ul>
 </div>
 <div class="container">
@@ -24,8 +36,8 @@
 
 
         <figure class="figure-synopsis">
-            <a class="figure-a-synopsis"</a>
-            <p>  <?= $livre->getSynopsis_book() ?> </p>
+
+
         </figure>
         <br class="figure-review">
 
@@ -36,43 +48,73 @@
             <!-- comment will be apped here from db-->
         </div>
         <!-- comment form -->
-        <form id="form" method="post" action="">
+        <br>
+    </ul>
+
+    <h2>Commentaires : </h2>
+    <br>
+    <ul>
+        <?php
+
+        if (isset($_SESSION["id"])):
+        ?>
+        <form id="form" method="post" action="/ContriBooks/Book?ISBN=<?= $ISBN ?>">
             <!-- need to supply post id with hidden fild -->
             <input type="hidden" name="postid" value="1">
             <label>
                 <span>Score :</span>
-                <input type="text" name="score" id="comment-name" placeholder="Le score (0-5)" required>
+                <input type="text" name="score" id="comment-name" placeholder="Le score (0-5)" required
+                       value="<?php if (!empty($commentaire)) {
+                           echo $commentaire[0]->getScore();
+                       } ?>">
+
             </label>
+            <br>
             <label>
                 <span>Votre commentaire :</span>
-                <textarea name="comment" id="comment" cols="30" rows="1" placeholder="Type your comment here...." required></textarea>
+                <textarea name="comment" id="comment" cols="30" rows="1" placeholder="Type your comment here...."
+                          required><?php if (!empty($commentaire)) {
+                        echo $commentaire[0]->getOpinion();
+                    } ?> </textarea>
             </label>
-            <input type="submit" id="submit" value="Submit Comment">
+
+            <?php
+            if (count($commentaire) != 0):?>
+                <input type="submit" name="statusComment" id="submit" value="Edit">
+            <?php else: ?>
+                <input type="submit" name="statusComment" id="submit" value="Submit Comment">
+            <?php endif; ?>
+            <?php
+            else:
+                echo "Vous devez être connectés pour poster un commentaire "; ?>
+            <?php endif; ?>
         </form>
+
+        <br>
 
         <?php
         //version php
         $i = 1;
-        foreach ($reviews as $review ):
-            echo ("Commentaire n°".$i." : ");
-            $notice = $review ->getOpinion();
-            $i = $i+1;
+        foreach ($reviews as $review):
+            echo("Commentaire n°" . $i . " : ");
+            $notice = $review->getOpinion();
+            $i = $i + 1;
             ?>
             <p>  <?= $notice ?> </p>
         <?php endforeach; ?>
-        <script>
-            $("#more_com").click(function(){
-
-                $.ajax({
-                    url : 'ControllerBook.php', // La ressource ciblée
-                    type : 'POST', // Le type de la requête HTTP.
-                    data : 'score='+ score + '&commentaire=' + comment,
-                    dataType : 'html',
-                    success : function()
-                });
-
-            });
-        </script>
         </figure>
     </ul>
 </div>
+<script>
+    $("#more_com").click(function () {
+
+        $.ajax({
+            url: 'ControllerBook.php', // La ressource ciblée
+            type: 'POST', // Le type de la requête HTTP.
+            data: 'score=' + score + '&commentaire=' + comment,
+            dataType: 'html',
+            success: function ()
+        });
+
+    });
+</script>

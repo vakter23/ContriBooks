@@ -10,8 +10,9 @@ class ControllerAccueil
     {
         if(isset($url) && count( array($url) )>1)
             throw new Exception('Page Introuvable');
-        else
-              $this->newBooks();
+        else {
+            $this->newBooks();
+            }
     }
     private function newBooks()
     {
@@ -22,6 +23,5 @@ class ControllerAccueil
         $this->_view->generate(array('newBooks' => $newBooks));
 
     }
-
 
 }

@@ -29,7 +29,6 @@ class UserManager extends Model
         foreach($this->users as $user) {
             if($user->getUsername() == $_POST['login']) {
                 if (password_verify($_POST['password'], $user->getPassword())) {
-                    var_dump("test");
                     $_SESSION['id'] = $user->getId_user();
                     $_SESSION['login'] = $_POST['login'];
                     $_POST['submit'] = 'connected';
@@ -39,8 +38,11 @@ class UserManager extends Model
     }
 
     public function disconnect() {
-
         session_destroy();
     }
 
+    public function getStatsUser($id_user)
+    {
+        return $this->getWithParams('user', 'WHERE id_user = ' . $id_user . ';', 'user');
+    }
 }
