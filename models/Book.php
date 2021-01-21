@@ -30,6 +30,15 @@ class Book
         }
     }
 
+    public function getRate()
+    {
+        return $this->_rate;
+    }
+
+    public function setRate($rate)
+    {
+        $this->_rate = $rate;
+    }
 
     public function getISBN()
     {
