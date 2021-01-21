@@ -13,14 +13,14 @@ class ControllerConnexion
         else {
             $this->_userManager = new UserManager;
             $newUsers = $this->_userManager->getUsers();
+            if(isset($_POST['submit']) && !isset($_SESSION['id'])) {
+                $this->log_In();
+            }
             $this->_view = new View('Connexion');
             $this->_view->generate(array('newUsers' => $newUsers));
-        }
-        if(isset($_POST['login']) && !isset($_SESSION['login'])) {
-            $this->log_In();
-        }
-        if(isset($_POST['logout'])) {
-            $this->sign_Out();
+            if (isset($_POST['logout']) && isset($_SESSION['login'])) {
+                $this->sign_Out();
+            }
         }
     }
 

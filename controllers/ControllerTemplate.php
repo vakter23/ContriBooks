@@ -3,19 +3,24 @@
 
 class ControllerTemplate {
 
-    private $_bookManager;
+    protected $_loader;
 
     public function __construct()
     {
-        $this->_bookManager = new BookManager;
-        $books = $this->_bookManager->search();
+        $this->_loader = new LoaderManager();
+        //$this->search();
+    }
+
+    public function search() {
+
+        $books = $this->_loader->getBooks();
         $result = "";
         if (count($books) > 0) {
             foreach ($books as $book) {
-                $result = $result . '<div class="search-result">' . $book->getTitle_book() . '</div>';
+                $result = $result . '<div class="search-result">'.$book['title_book'].'</div>';
             }
         }
-        header('Content-Type: application/json');
-        echo json_encode($result);
+        $result = "lol";
+        return json_encode($result);
     }
 }
