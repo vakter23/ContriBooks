@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerConnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerRegister.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerRegister.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ControllerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Routeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Routeur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LoaderManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoaderManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewConnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewRegister.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewRegister.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

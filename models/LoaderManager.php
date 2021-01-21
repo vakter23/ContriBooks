@@ -1,37 +1,22 @@
 <?php
 
-class LoaderManager
+class LoaderManager extends Model
 {
-    private $action;
 
-    public function __construct()
-    {
-        header('Content-Type: application/json');
-        $this->action = $_POST['action'];
-        $this->switch();
-    }
-
-    public function switch() {
-        switch($this->action) {
-            case "autocomplete" :
-                $this->getBooks();
-                break;
-        }
+    public function __construct(){
     }
 
     public function getBooks() {
-//        $query = $_POST['autocomplete'];
-//        $req = $this->getBdd()->prepare('SELECT title_book FROM book WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';');
-//        $req->execute();
-//        $books = $req->fetchAll();
-//        $result = "";
-//        if (count($books) > 0) {
-//            foreach ($books as $book) {
-//                $result = $result . '<div class="search-result">'.$book['title_book'].'</div>';
-//            }
-//        }
-        $result = "lol";
-        return json_encode($result);
+        $query = $_POST['autocomplete'];
+        $books= $this->getWithParams('book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
+        $result = "";
+        if (count($books) > 0) {
+            foreach ($books as $book) {
+                $ISBN = $book->getISBN();
+                $result =  $result .'<a href="/Contribooks/Book?ISBN='.$ISBN.'"><div class="search-result">'.$book->getTitle_book().'</div></a>';
+            }
+        }
+        return $result;
 
     }
 

@@ -156,7 +156,7 @@
         padding:10px;
         font-family:Times New Roman;
         font-size: 20px;
-        color:blue;
+        color:white;
     }
 </style>
 
@@ -193,21 +193,6 @@
             alert(thrownError);
             //alert with HTTP error
         });
-        // $.ajax({
-        //     type: "POST",
-        //     url: "controllers/controllerTemplate.php",
-        //     data: 'query=' + val,
-        //     /beforeSend: function () {
-        //         $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-        //     },/
-        //     success: function(data) {
-        //         console.log("success");
-        //         $('#search-result-container').html(data);
-        //     },
-        //     error: function() {
-        //         $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
-        //     }
-        // })
     }
 
     </script>
