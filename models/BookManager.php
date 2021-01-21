@@ -28,7 +28,7 @@ class BookManager extends Model
     public function addComment($ISBN){
         $score = $_POST["score"];
         $comment = $_POST["comment"];
-        return $this->addWithParams('review (isbn, score, opinion','\''.$ISBN.'\',\''.$score.'\', \' '.$comment.' \' ');
+        return $this->addWithParams('review (isbn, score, opinion)','\''.$ISBN.'\', \''.$score.'\', \''.$comment.'\'');
 
     }
 

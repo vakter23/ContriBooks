@@ -12,28 +12,18 @@ class ControllerRegister
             throw new Exception('Page Introuvable');
         else {
             $this->_userManager = new UserManager;
+            if(isset($_POST['email'])) {
+                $result = $this->_userManager->checkIfExists();
+                if(count($result)>0) {
+                    $_POST['check'] = false;
+                }
+                else {
+                    $this->_userManager->addUser();
+                }
+            }
             $newUsers = $this->_userManager->getUsers();
-
             $this->_view = new View('Register');
             $this->_view->generate(array('newUsers' => $newUsers));
-        }
-    //CHECK SI LES TROIS VARIABLES SONT REMPLIES
-        if(isset($_POST['email'])) {
-            $this->actions();
-        }
-    }
-
-    function actions()
-    {
-        $result = $this->_userManager->checkIfExists();
-        if($result == 1) {
-            echo("mauvais login");
-        }
-        else if ($result == 2) {
-            echo("mauvais email");
-        }
-        else {
-            $this->_userManager->addUser();
         }
     }
 }

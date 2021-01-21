@@ -1,7 +1,6 @@
 <?php
 require_once('core/View.php');
 session_start();
-
 class Routeur
 {
     private $_ctrl;

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="utils/script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,7 +157,7 @@
         padding:10px;
         font-family:Times New Roman;
         font-size: 20px;
-        color:blue;
+        color:white;
     }
 </style>
 
@@ -193,21 +194,6 @@
             alert(thrownError);
             //alert with HTTP error
         });
-        // $.ajax({
-        //     type: "POST",
-        //     url: "controllers/controllerTemplate.php",
-        //     data: 'query=' + val,
-        //     /beforeSend: function () {
-        //         $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-        //     },/
-        //     success: function(data) {
-        //         console.log("success");
-        //         $('#search-result-container').html(data);
-        //     },
-        //     error: function() {
-        //         $('#search-result-container').html("<div class='search-result'>No Result Found...</div>");
-        //     }
-        // })
     }
 
     </script>
