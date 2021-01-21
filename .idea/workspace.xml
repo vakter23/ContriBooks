@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/media/img/book/9782070782895.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/ControllerRules.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/viewRules.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketBookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketBookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketContactManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketContactManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/CSS/styleAccueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/CSS/styleAccueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewError.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewError.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Contact" />
+        <entry key="$PROJECT_DIR$" value="RequestBook" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,7 +99,7 @@
       <workItem from="1611065535015" duration="9457000" />
       <workItem from="1611159573902" duration="7017000" />
       <workItem from="1611170227533" duration="8092000" />
-      <workItem from="1611221322463" duration="5876000" />
+      <workItem from="1611221322463" duration="9103000" />
     </task>
     <task id="LOCAL-00003" summary="Add: Image">
       <created>1609345743051</created>
@@ -150,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611164903638</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add : RequestBook &amp; ErrorPage">
+      <created>1611227362356</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611227362356</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +188,7 @@
     <MESSAGE value="Fusion: part 1" />
     <MESSAGE value="Fusion: part 2" />
     <MESSAGE value="Add : Contact &amp; Improve other pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add : Contact &amp; Improve other pages" />
+    <MESSAGE value="Add : RequestBook &amp; ErrorPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add : RequestBook &amp; ErrorPage" />
   </component>
 </project>
