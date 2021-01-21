@@ -1,7 +1,7 @@
 <?php
 
 
-class Wishlist
+class Wish
 {
 
     private $_id_wishlist;
@@ -15,31 +15,30 @@ class Wishlist
 
     public function hydrate(array $data)
     {
-        foreach($data as $key => $value)
-        {
-            $method = 'set'.ucfirst($key);
+        foreach ($data as $key => $value) {
+            $method = 'set' . ucfirst($key);
 
-            if(method_exists($this,$method))
+            if (method_exists($this, $method))
                 $this->$method($value);
         }
     }
 
-    public function getIdWishlist()
+    public function getId_wishlist()
     {
         return $this->_id_wishlist;
     }
 
-    public function setIdWishlist($id_wishlist)
+    public function setId_wishlist($id_wishlist)
     {
         $this->_id_wishlist = $id_wishlist;
     }
 
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->_id_user;
     }
 
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->_id_user = $id_user;
     }

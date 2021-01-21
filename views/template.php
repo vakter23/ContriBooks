@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -69,11 +69,14 @@
                         if (isset($_SESSION['login']))
                         {
                             echo'<form action="/ContriBooks/Connexion" method="post"><input type="submit" name="logout" value="Deconnexion" class="btn btn-outline-info ml-5"></form>';
+                            echo '</br>';
+                            echo '<form action="/ContriBooks/Profile?user='.$_SESSION["id"].'" method="post"><input type="submit" name="profile" value="Profil" class="btn btn-outline-info ml-5"></form>';
                         }
                         else {
                             echo '<button class="btn btn-outline-info ml-5" type="button"> <a href="/Contribooks/Connexion">Connexion</a></button>';
-                            //echo '<form action="/ContriBooks/Connexion" method="post"><input type="submit" value="Connexion" class="btn btn-outline-info ml-5"></form>';
                         }
+
+
                         ?>
                     </li>
 
