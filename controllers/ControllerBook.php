@@ -24,6 +24,10 @@ class ControllerBook
             $reviews = $this->_bookManager->getReviewsByISBN($this->_isbn);
             $this->_wishManager = new WishManager();
 
+            $allComments=[];
+            $userComments=[];
+            $wishlist=[];
+            $likelist=[];
             if (isset($_SESSION["id"])) {
                 $comments = $this->_bookManager->getReviewByIdUser($this->_isbn);
                 $likelist = $this->_likeListManager->getLikeListByUserAndISBN($this->_isbn);

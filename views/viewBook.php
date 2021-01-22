@@ -170,6 +170,7 @@
 
         <?php
         $i = 1;
+
         foreach ($commentaires as $review):
             echo("Commentaire n°" . $i . " : ");
             $notice = $review->getOpinion();
