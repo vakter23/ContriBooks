@@ -10,7 +10,7 @@ class UserManager extends Model
         return $this->users;
     }
     public function checkIfExists() {
-        $this->users = $this->getWithParams('user', 'WHERE username = \''.$_POST['login'].'\' OR email = \''.$_POST['email'].'\';', 'User');
+        $this->users = $this->getWithParams('*','user', 'WHERE username = \''.$_POST['login'].'\' OR email = \''.$_POST['email'].'\';', 'User');
         return $this->users;
     }
     public function addUser() {
@@ -43,6 +43,6 @@ class UserManager extends Model
 
     public function getStatsUser($id_user)
     {
-        return $this->getWithParams('user', 'WHERE id_user = ' . $id_user . ';', 'user');
+        return $this->getWithParams('*','user', 'WHERE id_user = ' . $id_user . ';', 'user');
     }
 }

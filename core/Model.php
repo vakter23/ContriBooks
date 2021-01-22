@@ -37,6 +37,7 @@ abstract class Model
         $var = [];
         $req = $this->getBdd()->prepare('SELECT '.$tuple.' FROM '.$table. ' ' . $params);
         $req->execute();
+
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
             $var[] = new $obj($data);
@@ -70,18 +71,12 @@ abstract class Model
         $req->closeCursor();
     }
 
-    public function removeWithParams($table, $condition) {
-        $req = $this->getBdd()->prepare('DELETE FROM '.$table.' WHERE '.$condition.';');
-        $req->execute();
-        $req->closeCursor();
-    }
 
 
     protected function getLastReviews($user, $obj){
         $var = [];
         $req = $this->getBdd()->prepare('SELECT opinion, id_user  FROM review where (id_user ='.$user.');');
         $req->execute();
-
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
             $var[] = new $obj($data);

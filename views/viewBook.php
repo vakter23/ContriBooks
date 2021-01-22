@@ -85,7 +85,7 @@
             </label>
 
             <?php
-            if (count($commentaire) != 0):?>
+            if (isset($commentaire) && count($commentaire) != 0):?>
                 <input type="submit" name="statusComment" id="submit" value="Edit">
             <?php else: ?>
                 <input type="submit" name="statusComment" id="submit" value="Submit Comment">

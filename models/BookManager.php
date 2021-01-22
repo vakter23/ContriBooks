@@ -12,15 +12,12 @@ class BookManager extends Model
     }
     public function getNewBestFiveBooks()
     {
-        return $this->getWithParams('book','ORDER BY date_of_publication DESC,rate LIMIT 5;','Book');
+        return $this->getWithParams('*','book','ORDER BY date_of_publication DESC,rate LIMIT 5;','Book');
     }
 
     public function search() {
         if(isset($_POST['query'])){$query = $_POST['query'];}else{$query='';}
         return $this->getWithParams('*','book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
-    }
-    public function getBookByISBN($ISBN){
-        return $this->getWithParams('book', 'WHERE ISBN = '.$ISBN.';', 'Book');
     }
     public function getBookByISBN($ISBN){
         return $this->getWithParams('*','book', 'WHERE ISBN = '.$ISBN.';', 'Book');
@@ -44,11 +41,6 @@ class BookManager extends Model
     public function getAllBooksAuthor($idauthor)
     {
         return $this->getWithParams('*','author', 'WHERE id_author = ' . $idauthor . ';', 'Author');
-    }
-
-
-    public function getTop50(){
-        return $this->getWithParams('book', 'ORDER BY RATE DESC LIMIT 50', 'Book');
     }
 
 
@@ -90,12 +82,12 @@ class BookManager extends Model
 
     public function getLastReviewsByUser($id_user)
     {
-        return $this->getWithParams('opinion, id_user' ,' review ','where (id_user ='.$id_user.');', 'Review');
+        return $this->getWithParams('*','review' ,'where (id_user ='.$id_user.');', 'Review');
     }
 
 
     public function getNewBooks() {
-        return $this->getWithParams('book', 'ORDER BY date_of_publication DESC', 'Book');
+        return $this->getWithParams('*','book', 'ORDER BY date_of_publication DESC', 'Book');
     }
 
     public function deleteBook($ISBN)
@@ -111,21 +103,13 @@ class BookManager extends Model
         return $this->addWithParams('book'," ");
 
     }
-    public function getAuthor($iduser)
-    {
-        return $this->getAuteurByAuteur($iduser);
-    }
-
-    public function getBooksByAuthor($iduser)
-    {
-        return $this->getBookByAuteur($iduser, 'isbn');
-    }
+//    public function getAuthor($iduser)
+//    {
+//        return $this->getAuteurByAuteur($iduser);
+//    }
 
     public function getTop50(){
-        return $this->getWithParams('book', 'ORDER BY rate DESC LIMIT 50', 'Book');
-    }
-    public function getBookByWishlist($iduser){
-        return $this->getWithParams('book', 'natural join wish where book.isbn = wish.isbn AND wish.id_user = '.$iduser.';', 'Book' );
+        return $this->getWithParams('*','book', 'ORDER BY rate DESC LIMIT 50', 'Book');
     }
 
 

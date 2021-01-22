@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/AuthorManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/AuthorManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LoaderManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoaderManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/WishManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/WishManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
