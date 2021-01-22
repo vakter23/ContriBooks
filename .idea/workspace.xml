@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketReportManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketReportManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewRating.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611279884886</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add : Signalement">
+      <created>1611283208415</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611283208415</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +241,7 @@
     <MESSAGE value="Fusion V2 : part1" />
     <MESSAGE value="Fusion V2 : part2" />
     <MESSAGE value="Add : Admin PART &amp; improve Accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add : Admin PART &amp; improve Accueil" />
+    <MESSAGE value="Add : Signalement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add : Signalement" />
   </component>
 </project>
