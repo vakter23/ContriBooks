@@ -37,7 +37,7 @@
                 $filename = 'utils/media/img/book/'.$img_link;
                 if(!file_exists($filename)) $filename = 'utils/media/img/book/NotFound.jpg';
                 ?>
-                <div class="p-2 nav-item book-list" genre="<?= $book->getId_genre()?>" type="<?= $book->getId_type()?>" author="<?= $book->getId_author()?>"">
+                <div class="p-2 nav-item book-list test" genre="<?= $book->getId_genre()?>" type="<?= $book->getId_type()?>" author="<?= $book->getId_author()?>"">
                     <div class="row border border-primary" style="background-color: #B9C6CE">
                         <div class="col border-right border-primary">
                             <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 200px">
@@ -89,6 +89,7 @@
         if(number == 3) {
             for(let book of books) {
                 book.setAttribute("style", "display:block;");
+                console.log("if");
             }
         }
         else {

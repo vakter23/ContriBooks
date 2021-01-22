@@ -33,9 +33,9 @@
                             Genre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/ContriBooks/Search?filter=Sciences">Sciences</a>
-                            <a class="dropdown-item" href="/ContriBooks/Search?filter=BD">BD</a>
-                            <a class="dropdown-item" href="/ContriBooks/Search?filter=Roman">Roman</a>
+                            <a class="dropdown-item" href="/ContriBooks/Search">Sciences</a>
+                            <a class="dropdown-item" href="/ContriBooks/Search">BD</a>
+                            <a class="dropdown-item" href="/ContriBooks/Search">Roman</a>
                         </div>
                     </li>
                 </ul>

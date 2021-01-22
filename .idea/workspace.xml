@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewRating.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/viewSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewSearch.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Fusion" />
+        <entry key="$PROJECT_DIR$" value="Recommendations" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +36,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/vakter23/ContriBooks" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1mNTVTNa1ikAlMy1ynikeupcTZ3" />
   <component name="ProjectViewState">
@@ -172,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611245831634</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adding : LikeList classes and recommandation algorithm">
+      <created>1611287667046</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611287667046</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +234,7 @@
     <MESSAGE value="Add : RequestBook &amp; ErrorPage" />
     <MESSAGE value="Fusion V2 : part1" />
     <MESSAGE value="Adding NewBooks classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding NewBooks classes" />
+    <MESSAGE value="Adding : LikeList classes and recommandation algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding : LikeList classes and recommandation algorithm" />
   </component>
 </project>
