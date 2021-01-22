@@ -8,6 +8,9 @@ class User
     private $_username;
     private $_email;
     private $_password;
+    private $_biography_user;
+    private $_date_of_creation;
+
 
     public function __construct(array $data)
     {
@@ -63,6 +66,21 @@ class User
     public function setUsername($username)
     {
         $this->_username = $username;
+    }
+    public function getDate_of_creation(){
+        return $this->_date_of_creation;
+    }
+
+    public function setDate_of_creation($_date_of_creation){
+        $this->_date_of_creation = $_date_of_creation;
+    }
+
+    public function getBiography_user(){
+        return $this->_biography_user;
+    }
+
+    public function setBiography_user($_biography_user){
+        $this->_biography_user = $_biography_user;
     }
 
 }

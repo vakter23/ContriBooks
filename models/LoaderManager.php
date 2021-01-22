@@ -8,7 +8,7 @@ class LoaderManager extends Model
 
     public function getBooks() {
         $query = $_POST['autocomplete'];
-        $books= $this->getWithParams('book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
+        $books= $this->getWithParams('*','book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
         $result = "";
         if (count($books) > 0) {
             foreach ($books as $book) {
@@ -19,7 +19,5 @@ class LoaderManager extends Model
         return $result;
 
     }
-
-
 
 }

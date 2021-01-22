@@ -12,7 +12,7 @@ class ControllerTemplate {
     }
 
     public function search() {
-
         echo $this->_loader->getBooks();
     }
+
 }

@@ -20,7 +20,11 @@ abstract class Model
             self::setBdd();
         return self::$_bdd;
     }
-
+    public function removeWithParams($table, $condition) {
+        $req = $this->getBdd()->prepare('DELETE FROM '.$table.' WHERE '.$condition.';');
+        $req->execute();
+        $req->closeCursor();
+    }
     protected function getAll($table,$obj)
     {
         $var = [];
@@ -33,9 +37,9 @@ abstract class Model
         $req->closeCursor();
         return $var;
     }
-    protected function getWithParams($table,$params,$obj){
+    protected function getWithParams($tuple, $table,$params,$obj){
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM '.$table. ' ' . $params);
+        $req = $this->getBdd()->prepare('SELECT '.$tuple.' FROM '.$table. ' ' . $params);
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
@@ -53,38 +57,20 @@ abstract class Model
         $req->execute();
         $req->closeCursor();
     }
-    protected function getLastReviews($user, $obj){
+     protected function updateReview($newOpinion, $idReview, $note, $id_user){
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT opinion, id_user  FROM review where (id_user ='.$user.');');
-        $req->execute();
-
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
-            $var[] = new $obj($data);
-        }
-        $req->closeCursor();
-        return $var;
-    }
-    protected function updateReview($newOpinion, $idReview){
-        $var = [];
-        $req = $this->getBdd()->prepare('UPDATE review SET opinion = \' ' .$newOpinion.' \' WHERE review.id_review ='.$idReview.';');
+        $req = $this->getBdd()->prepare('UPDATE review SET opinion=\''.$newOpinion.'\', score=\' '.$note.'\' WHERE review.id_review='.$idReview.' AND id_user ='.$id_user.';');
         $req->execute();
         $req->closeCursor();
-        return $var;
+
     }
 
-    protected function getAuteurByAuteur($iduser){
+    protected function updateUserBio($iduser, $bio){
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM `book` NATURAL JOIN author WHERE book.id_author = author.id_author AND book.id_author = '.$iduser.';');
+        $req = $this->getBdd()->prepare('UPDATE user SET biography_user =\' ' .$bio.' \' WHERE user.id_user ='.$iduser.';');
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
-            $var[] = new Author($data);
-        }
         $req->closeCursor();
-        return $var;
     }
-
     protected function getBookByAuteur($iduser){
         $var = [];
         $req = $this->getBdd()->prepare('SELECT isbn FROM `book` NATURAL JOIN author WHERE book.id_author = author.id_author AND book.id_author = '.$iduser.';');

@@ -12,7 +12,7 @@ class UserManager extends Model
 
     public function checkIfExists() {
 
-        $this->users = $this->getWithParams('user', 'WHERE username = \''.$_POST['login'].'\' OR email = \''.$_POST['email'].'\';', 'User');
+        $this->users = $this->getWithParams('*','user', 'WHERE username = \''.$_POST['login'].'\' OR email = \''.$_POST['email'].'\';', 'User');
         return $this->users;
     }
 
@@ -21,7 +21,7 @@ class UserManager extends Model
         $login = $_POST['login'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $email = $_POST['email'];
-        $this->addWithParams('user(username, password, email)', '\''.$login.'\', \''.$password.'\', \''.$email.'\'');
+        $this->addWithParams('user(username, password, email)', '\''.$login.'\', \''.$password.'\', \''.$email.'\'', '');
     }
 
     public function connect() {
@@ -43,6 +43,12 @@ class UserManager extends Model
 
     public function getStatsUser($id_user)
     {
-        return $this->getWithParams('user', 'WHERE id_user = ' . $id_user . ';', 'user');
+        return $this->getWithParams('*','user', 'WHERE id_user = ' . $id_user . ';', 'user');
+    }
+
+    public function updateBiography($id_user, $biography)
+    {
+        $biography = htmlentities($biography, ENT_QUOTES, 'UTF-8');
+        return $this->updateUserBio($id_user, $biography);
     }
 }

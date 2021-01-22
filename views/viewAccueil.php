@@ -1,5 +1,4 @@
 <?php  $this->_t = 'Accueil'; ?>
-
 <div class="container">
     <h2><a>Nouveautés</a></h2>
     <ul class="nav justify-content-center mw-25">
@@ -11,7 +10,7 @@
             ?>
             <ul class="list-inline text-center align-items-center">
                 <ul class="list-inline text-center align-items-center">
-                    <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px">
+                    <img class="d-inline-flex p-2" src="<?= $filename ?>" style="width: 150px; height: 204px"href="/Contribooks/Book?ISBN=<?= $ISBN ?>">
                 </ul>
                 <ul class="list-inline text-center align-items-center">
                     <a class="nav-link active" style="font-size: 14px;" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= substr($book->getTitle_book(),0,40) ?></a>
