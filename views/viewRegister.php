@@ -1,4 +1,3 @@
-
 <div class="border border-1 mx-auto" style="width:400px">
     <form action="/ContriBooks/Register?" accept-charset="UTF-8" method="post">
         <label for="login_field" class="">Pseudo</label>
@@ -11,11 +10,10 @@
     </form>
 </div>
 <?php
-if(isset($_POST['check'])) {
-    if($_POST['check'] == false) {
+if (isset($_POST['check'])) {
+    if ($_POST['check'] == false) {
         echo '<p>Identifiant ou email incorrect</p>';
-    }
-    else {
+    } else {
         echo '<p>Vous êtes maintenant inscrit ! Vous pouvez vous connecter <a href="/ContriBooks/Connexion">ici</a></p>';
     }
 }

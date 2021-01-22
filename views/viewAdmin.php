@@ -132,7 +132,8 @@
                             <button type="submit" name="addNewBook" id="submit">Ajoutez
                         </td>
                         <td>
-                            <button type="submit" name="deleteRequestBook" id="submit" value="<?php $ticboo->getId_ticket_book() ;?>">Supprimez
+                            <button type="submit" name="deleteRequestBook" id="submit"
+                                    value="<?php $ticboo->getId_ticket_book(); ?>">Supprimez
                         </td>
                     </tr>
                 </form>

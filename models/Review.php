@@ -7,6 +7,7 @@ class Review
     private $_id_review;
     private $_ISBN;
     private $_id_user;
+    private $_id_genre;
     private $_score;
     private $_opinion;
     private $_like;
@@ -47,6 +48,17 @@ class Review
     {
         $this->_ISBN = $ISBN;
     }
+
+    public function getId_genre()
+    {
+        return $this->_id_genre;
+    }
+
+    public function setId_genre($IdGenre)
+    {
+        $this->_id_genre = $IdGenre;
+    }
+
 
     public function getId_user()
     {

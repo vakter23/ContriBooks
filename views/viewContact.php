@@ -1,4 +1,4 @@
-<?php  $this->_t = 'Contact'; ?>
+<?php $this->_t = 'Contact'; ?>
 
 <div class="container p-5">
     <h1 class="font-weight-bold">Contact</h1>
@@ -19,7 +19,7 @@
         <div><textarea cols="40" rows="5" name="Message" class="form-control" required></textarea></div>
         <br>
 
-        <input type="submit" value="Send" class="btn btn-primary form-control" />
+        <input type="submit" value="Send" class="btn btn-primary form-control"/>
     </form>
 </div>
 

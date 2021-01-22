@@ -12,8 +12,10 @@
                         Sorry, an error has occured, Requested page not found!
                     </div>
                     <div class="error-actions">
-                        <a href="/Contribooks/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
-                            Take Me Home </a><a href="/Contribooks/Contact" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+                        <a href="/Contribooks/" class="btn btn-primary btn-lg"><span
+                                    class="glyphicon glyphicon-home"></span>
+                            Take Me Home </a><a href="/Contribooks/Contact" class="btn btn-default btn-lg"><span
+                                    class="glyphicon glyphicon-envelope"></span> Contact Support </a>
                     </div>
                 </div>
             </div>
@@ -23,7 +25,17 @@
 </div>
 
 <style>
-    .error-template {padding: 40px 15px;text-align: center;}
-    .error-actions {margin-top:15px;margin-bottom:15px;}
-    .error-actions .btn { margin-right:10px; }
+    .error-template {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .error-actions {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .error-actions .btn {
+        margin-right: 10px;
+    }
 </style>

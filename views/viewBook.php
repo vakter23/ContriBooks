@@ -21,7 +21,7 @@
 <div class="container">
     <?php
     $i = 0;
-    foreach ($allbooks as $livre):
+    foreach ($book as $livre):
         if ($livre->getId_genre() == $genre && $livre->getISBN() != $ISBN && $i < 3):
             $i + 1 ?>
             <?php $img_link = $livre->getISBN() . '.jpg';

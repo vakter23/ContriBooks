@@ -1,4 +1,4 @@
-<?php  $this->_t = 'Connexion'; ?>
+<?php $this->_t = 'Connexion'; ?>
 
 <div class="border border-1 mx-auto" style="width:300px">
     <form action="/ContriBooks/Connexion" accept-charset="UTF-8" method="post">
@@ -15,12 +15,11 @@
 </div>
 
 <?php
-if(isset($_POST['submit'])) {
-    if($_POST['submit'] == 'connected') {
+if (isset($_POST['submit'])) {
+    if ($_POST['submit'] == 'connected') {
         header('Location: /ContriBooks/Accueil');
         exit();
-    }
-    else {
+    } else {
         echo '<p>Identifiants incorrectes</p>';
     }
 }

@@ -25,10 +25,14 @@ class LikeListManager extends Model
     }
 
     public function like($isbn) {
+        $isbn = htmlentities($isbn);
+        $isbn = htmlspecialchars($isbn);
         $this->addWithParams('like_list (id_user, ISBN)', '\''.$_SESSION['id'].'\', \''.$isbn.'\'');
     }
 
     public function dislike($isbn) {
+        $isbn = htmlentities($isbn);
+        $isbn = htmlspecialchars($isbn);
         $this->removeWithParams('like_list', "id_user=".$_SESSION['id']." AND ISBN='".$isbn."'");
     }
 

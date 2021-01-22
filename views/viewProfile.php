@@ -39,14 +39,16 @@
     </div>
     <div class="row">
         <div class="col-6">
-        <h3>Vos commentaires : </h3>
-        <?php
-        foreach ($comments as $comment):
-            $notice = $comment->getOpinion();
-            $title = $comment->getISBN();
-            ?>
-            <div class="col-6"><ul><p>  <?= $notice ?> </p></ul></div>
-        <?php endforeach; ?>
+            <h3>Vos commentaires : </h3>
+            <?php
+            foreach ($comments as $comment):
+                $notice = $comment->getOpinion();
+                $title = $comment->getISBN();
+                ?>
+                <div class="col-6">
+                    <ul><p>  <?= $notice ?> </p></ul>
+                </div>
+            <?php endforeach; ?>
         </div>
         <div class="col-6">
             <h3>Votre Wishlist : </h3>
