@@ -18,16 +18,17 @@
 
         <?php endforeach; ?>
         <?php foreach ($authors as $author):
-
+        $auteur = $author;
         ?>
+        <?php endforeach;?>
         <div class="mx-auto" style="width: 450px;">
             <li class="nav-item">
                 <h2><a class="nav-link" href="/Contribooks/Book?ISBN=<?= $ISBN ?>"><?= $livre->getTitle_book() ?></a>
                 </h2>
                 <h3> Écrit par : <a
-                            href="/Contribooks/Author?author=<?= $author->getId_author() ?>"><?= $author->getFirst_name_author(); ?> <?= $author->getLast_name_author(); ?></a>
+                            href="/Contribooks/Author?author=<?= $author->getId_author() ?>"><?= $auteur->getFirst_name_author(); ?> <?= $auteur->getLast_name_author(); ?></a>
                 </h3>
-                <?php endforeach;?>
+
 
                 <form id="form" method="post">
                     <!-- need to supply post id with hidden fild -->
@@ -37,10 +38,10 @@
                             foreach ($wishes as $wish):
                                 if ($wish->getISBN() == $ISBN):
                                     $val = "Supprimer";
-                                    var_dump($wish->getISBN());?>
+                                    ;?>
                                 <?php elseif (!isset($val)):
                                     $val = "Ajouter";
-                                    var_dump($wish->getISBN());?>
+                                    ;?>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <?php if ($val == "Supprimer"): ?>

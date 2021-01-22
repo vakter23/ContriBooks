@@ -20,7 +20,7 @@ class ControllerBook
             $this->_view = new View('Book');
             $book = $this->_bookManager->getBookByISBN($this->_isbn);
             $this->_wishManager = new WishManager();
-
+            $wishlist = [];
             if (isset($_SESSION["id"])) {
                 $wishlist = $this->_wishManager->getWishlist($_SESSION["id"]);
 
@@ -51,20 +51,20 @@ class ControllerBook
                 $comments = null;
             }
             $authors = $this->_bookManager->getAuthor($book[0]->getId_author());
-            var_dump($book[0]);
             $userComments = "";
             $allComments = "";
 
             $allBooks = $this->_bookManager->getBooks();
+
             $this->_view->generate(array('book' => $book, 'commentaires' => $allComments, 'userComments' => $userComments, 'authors' => $authors, 'wishes' => $wishlist, 'allbooks' => $allBooks));
         }
         if (isset($_POST["wishlist"])) {
             if ($_POST["wishlist"] == "Ajouter") {
                 $this->addWish();
-                //echo "<meta http-equiv='refresh' content='0'>";
+                echo "<meta http-equiv='refresh' content='0'>";
             } else {
                 $this->removeWish();
-                //echo "<meta http-equiv='refresh' content='0'>";
+                echo "<meta http-equiv='refresh' content='0'>";
             }
         }
     }

@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/CSS/styleBook.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAuthor.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAuthor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ControllerBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/AuthorManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/AuthorManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/LoaderManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoaderManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketBookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketBookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketContactManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketContactManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/WishManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/WishManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewProfile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +38,38 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/mailgun/mailgun-php" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/multipart-stream-builder" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1mNTVTNa1ikAlMy1ynikeupcTZ3" />
   <component name="ProjectViewState">
