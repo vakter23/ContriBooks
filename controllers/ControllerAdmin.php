@@ -83,10 +83,6 @@ class ControllerAdmin
             $this->_ticketContactManager->deleteComment($IdTicket);
             echo "<meta http-equiv='refresh' content='0'>";
         }
-
-
-
-
         $this->_view = new View('Admin');
         $this->_view->generate(array('Books' => $books, 'Review'=>$review, 'User'=>$user,'TicketBook'=>$ticketBooks,'TicketContact'=>$ticketContact,'TicketReport'=>$ticketReport));
     }

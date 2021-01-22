@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TicketContactManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketContactManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611238876422</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add : Admin PART &amp; improve Accueil">
+      <created>1611277480826</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611277480826</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +226,7 @@
     <MESSAGE value="Add : RequestBook &amp; ErrorPage" />
     <MESSAGE value="Fusion V2 : part1" />
     <MESSAGE value="Fusion V2 : part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fusion V2 : part2" />
+    <MESSAGE value="Add : Admin PART &amp; improve Accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add : Admin PART &amp; improve Accueil" />
   </component>
 </project>
