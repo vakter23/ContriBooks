@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="" />
+    <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BookManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BookManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewRating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewSearch.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Rules" />
+        <entry key="$PROJECT_DIR$" value="Fusion" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611237602425</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding NewBooks classes">
+      <created>1611245831634</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611245831634</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +227,7 @@
     <MESSAGE value="Add : Contact &amp; Improve other pages" />
     <MESSAGE value="Add : RequestBook &amp; ErrorPage" />
     <MESSAGE value="Fusion V2 : part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fusion V2 : part1" />
+    <MESSAGE value="Adding NewBooks classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding NewBooks classes" />
   </component>
 </project>

@@ -21,7 +21,7 @@ abstract class Model
         return self::$_bdd;
     }
 
-    protected function getAll($table,$obj)
+    public function getAll($table,$obj)
     {
         $var = [];
         $req = $this->getBdd()->prepare('SELECT * FROM '.$table.';');
@@ -33,9 +33,9 @@ abstract class Model
         $req->closeCursor();
         return $var;
     }
-    protected function getWithParams($table,$params,$obj){
+    protected function getWithParams($tuple, $table,$params,$obj){
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM '.$table. ' ' . $params);
+        $req = $this->getBdd()->prepare('SELECT '.$tuple.' FROM '.$table. ' ' . $params);
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
@@ -45,7 +45,7 @@ abstract class Model
         return $var;
     }
 
-    protected function addWithParams($table,$params){
+    public function addWithParams($table,$params){
         // Les paramètres demandés sont les valeurs qu'il faut ajouter dans la bdd
         // La table, la table ou il faut l'ajouter + les tuples qu'on ajoute
         // l'obj, l'objet qu'on cherche a créer
@@ -53,6 +53,20 @@ abstract class Model
         $req->execute();
         $req->closeCursor();
     }
+
+    public function updateWithParams($table, $params) {
+        $req = $this->getBdd()->prepare('UPDATE '.$table.' SET '.$params.';');
+        $req->execute();
+        $req->closeCursor();
+    }
+
+    public function removeWithParams($table, $condition) {
+        $req = $this->getBdd()->prepare('DELETE FROM '.$table.' WHERE '.$condition.';');
+        $req->execute();
+        $req->closeCursor();
+    }
+
+
     protected function getLastReviews($user, $obj){
         $var = [];
         $req = $this->getBdd()->prepare('SELECT opinion, id_user  FROM review where (id_user ='.$user.');');

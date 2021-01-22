@@ -1,10 +1,5 @@
 <?php $this->_t = 'Rate'; ?>
 
-    /* TO DO:
-        SYSTEME DE PAGINATION
-        FAIRE UNE LISTE GENRE: 1. HARRY 2. BERSERK NIVEAU AFFICHAGE
-    */
-
     <div class="d-inline">
         <ul class="nav justify-content-center mw-25">
             <?php foreach($newBooks as $book): ?>
