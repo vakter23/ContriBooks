@@ -28,6 +28,13 @@ class ControllerProfile
                 $wishlist = $this->_wishlistManager->getWishlist($this->_id);
                 $books = $this->_bookManager->getBookByWishlist($this->_id);
                 $this->_view->generate(array('books' => $books, 'stats' => $stats, 'comments' => $comments, 'wishlist' => $wishlist));
+
+                if(isset($_POST["bio"])){
+                    echo $_POST["bio"];
+                    $this->_userManager->updateBiography($this->_id, $_POST["bio"]);
+                    echo "<meta http-equiv='refresh' content='0'>";
+
+                }
             }
         }
     }

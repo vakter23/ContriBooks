@@ -13,6 +13,8 @@ class ControllerAccueil
             throw new Exception('Page Introuvable');
         else {
             $this->_bookManager = new BookManager;
+            $likedList = [];
+            $likeList = [];
             if(isset($_SESSION['id'])) {
                 $this->_likeListManager = new LikeListManager();
                 $likedList = $this->liked();

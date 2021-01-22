@@ -45,4 +45,10 @@ class UserManager extends Model
     {
         return $this->getWithParams('*','user', 'WHERE id_user = ' . $id_user . ';', 'user');
     }
+
+    public function updateBiography($id_user, $biography)
+    {
+        $biography = htmlentities($biography, ENT_QUOTES, 'UTF-8');
+        return $this->updateUserBio($id_user, $biography);
+    }
 }

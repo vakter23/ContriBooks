@@ -20,8 +20,6 @@ class ControllerAuthor
 
             $author = $this->_authorManager->getAuthor($this->_idAuthor);
             $books = $this->_bookManager->getBooksByAuthor($this->_idAuthor);
-            //var_dump($books["isbn"]);
-           // $books = $this->_bookManager->getBookByISBN($books['_ISBN']);
            foreach ($books as $test){
                 $isbn = $test->getISBN();
            }

@@ -48,11 +48,21 @@ class BookManager extends Model
         return $this->getWithParams('*','book', 'natural join wish where book.isbn = wish.isbn AND wish.id_user = '.$iduser.';', 'Book' );
     }
 
+    public function getTop50(){
+        return $this->getWithParams('*','book', 'ORDER BY RATE DESC LIMIT 50', 'Book');
+    }
+
+
 
 
     public function getReviewsByISBN($ISBN){
         return $this->getWithParams('*','review', 'WHERE ISBN = '.$ISBN.';', 'Review');
     }
+
+    public function getReviewsByISBNAndIdUser($ISBN, $id_user){
+        return $this->getWithParams('*','review', 'WHERE ISBN = '.$ISBN.' AND id_user= '.$id_user.';', 'Review');
+    }
+
     public function addComment($ISBN){
         $score = $_POST["score"];
         $comment = ($_POST["comment"]);
@@ -61,10 +71,10 @@ class BookManager extends Model
         return $this->addWithParams('review (ISBN, id_user, score, opinion)', '\'' . $ISBN . '\',\'' . $user . '\',\'' . $score . '\',\'' . $comment . '\' ', '');
     }
 
-    public function changeComment($comment, $idReview, $note)
+    public function changeComment($comment, $idReview, $note, $id_user)
     {
         $comment = htmlentities($comment, ENT_QUOTES, 'UTF-8');
-        return $this->updateReview($comment, $idReview, $note);
+        return $this->updateReview($comment, $idReview, $note, $id_user);
     }
 
     public function getReviewByIdUser($ISBN)
@@ -73,11 +83,10 @@ class BookManager extends Model
         $result = "";
         if(count($results)>0){
             foreach ($results as $result) {
-                //var_dump($result);
                 $result = '<div class="add-comment"><p>'.$result->getScore().',' . $result->getOpinion() . '</p></div>';
             }
         }
-        echo $result;
+//        echo $result;
     }
 
     public function getLastReviewsByUser($id_user)
@@ -107,11 +116,6 @@ class BookManager extends Model
 //    {
 //        return $this->getAuteurByAuteur($iduser);
 //    }
-
-    public function getTop50(){
-        return $this->getWithParams('*','book', 'ORDER BY rate DESC LIMIT 50', 'Book');
-    }
-
 
 
 }
