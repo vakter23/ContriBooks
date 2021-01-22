@@ -51,6 +51,9 @@ class ControllerBook
                 $comments = null;
             }
             $authors = $this->_bookManager->getAuthor($book[0]->getId_author());
+            var_dump($book[0]);
+            $userComments = "";
+            $allComments = "";
 
             $allBooks = $this->_bookManager->getBooks();
             $this->_view->generate(array('book' => $book, 'commentaires' => $allComments, 'userComments' => $userComments, 'authors' => $authors, 'wishes' => $wishlist, 'allbooks' => $allBooks));
@@ -58,10 +61,10 @@ class ControllerBook
         if (isset($_POST["wishlist"])) {
             if ($_POST["wishlist"] == "Ajouter") {
                 $this->addWish();
-                echo "<meta http-equiv='refresh' content='0'>";
+                //echo "<meta http-equiv='refresh' content='0'>";
             } else {
                 $this->removeWish();
-                echo "<meta http-equiv='refresh' content='0'>";
+                //echo "<meta http-equiv='refresh' content='0'>";
             }
         }
     }

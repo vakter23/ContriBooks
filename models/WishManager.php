@@ -4,7 +4,9 @@ class WishManager extends Model
 {
     public function getWishlist($iduser)
     {
-        return $this->getWithParams('*','wish','WHERE id_user = '.$iduser.';', 'Wish');
+        $s = $this->getWithParams('*','wish','WHERE id_user = '.$iduser.';', 'Wish');
+        var_dump($s);
+        return $s;
     }
     public function addWithParams($table, $params)
     {
