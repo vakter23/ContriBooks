@@ -10,7 +10,7 @@
     </form>
     <p class="login-callout mt-3">
         Nouveau sur Contribooks?
-        <a href="Register">Create an account</a>.
+        <a href="Register">Créer un compte</a>.
     </p>
 </div>
 

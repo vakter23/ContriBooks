@@ -14,7 +14,9 @@ class ControllerNewBooks
             $this->_bookManager = new BookManager;
             $this->_view = new View('NewBooks');
             $books = $this->_bookManager->getNewBooks();
-            $this->_view->generate(array('newBooks' => $books));
+            $booksGenre1 = $this->_bookManager->getBooksGenre(1);
+            $booksGenre2 = $this->_bookManager->getBooksGenre(2);
+            $this->_view->generate(array('newBooks' => $books,'bookGenre1'=>$booksGenre1,'bookGenre2'=>$booksGenre2));
         }
     }
 }

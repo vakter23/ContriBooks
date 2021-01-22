@@ -8,7 +8,9 @@ class LikeListManager extends Model
     }
 
     public function getLiked() {
-        return $this->getWithParams('*','like_list', "natural join book WHERE id_user=".$_SESSION['id']."", 'LikeList');
+        $SESSION = htmlentities($_SESSION['id']);
+        $SESSION = htmlspecialchars($_SESSION['id']);
+        return $this->getWithParams('*','like_list', "natural join book WHERE id_user=".$SESSION."", 'LikeList');
     }
 
     public function getWillLike() {
@@ -16,7 +18,10 @@ class LikeListManager extends Model
     }
 
     public function getLikeListByUserAndISBN($isbn) {
-        return $this->getWithParams('*','like_list', "WHERE id_user=".$_SESSION['id']." AND ISBN='".$isbn."'", 'LikeList');
+        $SESSION = htmlentities($_SESSION['id']);
+        $SESSION = htmlspecialchars($SESSION);
+
+        return $this->getWithParams('*','like_list', "WHERE id_user=".$SESSION." AND ISBN='".$isbn."'", 'LikeList');
     }
 
     public function like($isbn) {
