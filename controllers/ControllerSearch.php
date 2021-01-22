@@ -11,7 +11,6 @@ class ControllerSearch
         if(isset($url) && count( array($url) )>1)
             throw new Exception('Page Introuvable');
         else {
-            //L'erreur
             $this->_bookManager = new BookManager;
             $newBooks = $this->_bookManager->search();
 

@@ -2,11 +2,7 @@
 
 
 <div class="container">
-
-
-    <?php foreach ($book
-
-    as $livre):
+    <?php foreach ($book as $livre):
     $ISBN = $livre->getISBN(); ?>
 
     <ul class="nav justify-content-center mw-25">
@@ -58,6 +54,16 @@
 
         if (isset($_SESSION["id"])):
         ?>
+        <?php if(!empty($likelist)):?>
+            <form method="post" action="/ContriBooks/Book?ISBN=<?= $ISBN ?>">
+                <input type="submit" name="like" id="like-button" value="Je n'aime pas">
+            </form>
+        <?php else: ?>
+            <form method="post" action="/ContriBooks/Book?ISBN=<?= $ISBN ?>">
+                <input type="submit" name="like" id="like-button" value="J'aime">
+            </form>
+        <?php endif; ?>
+
         <form id="form" method="post" action="/ContriBooks/Book?ISBN=<?= $ISBN ?>">
             <!-- need to supply post id with hidden fild -->
             <input type="hidden" name="postid" value="1">
@@ -86,14 +92,13 @@
             <?php endif; ?>
             <?php
             else:
-                echo "Vous devez être connectés pour poster un commentaire "; ?>
+                echo "Vous devez être connecté pour poster un commentaire "; ?>
             <?php endif; ?>
         </form>
 
         <br>
 
         <?php
-        //version php
         $i = 1;
         foreach ($reviews as $review):
             echo("Commentaire n°" . $i . " : ");
@@ -105,16 +110,3 @@
         </figure>
     </ul>
 </div>
-<script>
-    $("#more_com").click(function () {
-
-        $.ajax({
-            url: 'ControllerBook.php', // La ressource ciblée
-            type: 'POST', // Le type de la requête HTTP.
-            data: 'score=' + score + '&commentaire=' + comment,
-            dataType: 'html',
-            success: function ()
-        });
-
-    });
-</script>
