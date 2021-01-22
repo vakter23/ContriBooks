@@ -30,6 +30,7 @@
             ?>
         <?php endif;
     endforeach; ?>
+
 </div>
 <div class="container">
     <div class="row" style="background-color: #B9C6CE;padding: 20px;font-size: 20px;">
@@ -67,9 +68,48 @@
                     <input type="submit" name="like" id="like-button" value="J'aime">
                 </form>
             <?php endif; ?>
+            <form id="form" method="post">
+                <!-- need to supply post id with hidden fild -->
+                <label>
+                    <?php $val;
+                    if (!empty($wishes)) {
+                        foreach ($wishes as $wish):
+                            if ($wish->getISBN() == $ISBN):
+                                $val = "Supprimer";
+                                ;?>
+                            <?php elseif (!isset($val)):
+                                $val = "Ajouter";
+                                ;?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                        <?php if ($val == "Supprimer"): ?>
+                            <span>Supprimer de la wishlist ? :</span>
+                            <input type="submit" name="wishlist" id="score-data" value="<?= $val ?>">
+                            <input type="hidden" name="<?php $livre->getISBN() ?>" id="score-data"
+                                   value="<?= $val ?>">
+                        <?php elseif ($val == "Ajouter"): ?>
+                            <span>Ajouter à la wishlist ? :</span>
+                            <input type="submit" name="wishlist" id="score-data" value="<?= $val ?>">
+                            <input type="hidden" name="<?php $livre->getISBN() ?>" id="score-data"
+                                   value="<?= $val ?>">
+                        <?php endif;
+                    } else {
+                        $val = "Ajouter";
+                        ;?>
 
+                        <span>Ajouter à la wishlist ? :</span>
+                        <input type="submit" name="wishlist" id="score-data" value="<?= $val ?>">
+                        <input type="hidden" name="<?php $livre->getISBN() ?>" id="score-data" value="<?= $val ?>">
+                    <?php } ?>
+                </label>
+                <br>
+                <label>
+                </label>
+
+            </form>
         </div>
     </div>
+
     <div class="container" style="padding: 30px;">
         <h2>Livres du même genre : </h2>
         <?php

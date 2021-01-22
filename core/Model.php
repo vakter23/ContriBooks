@@ -60,6 +60,7 @@ abstract class Model
         // La table, la table ou il faut l'ajouter + les tuples qu'on ajoute
         // l'obj, l'objet qu'on cherche a créer
         $req = $this->getBdd()->prepare('INSERT INTO '.$table.' VALUES (' . $params. ');');
+        var_dump($req);
         $req->execute();
         $req->closeCursor();
     }
