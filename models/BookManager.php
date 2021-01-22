@@ -64,6 +64,19 @@ class BookManager extends Model
         return $this->getWithParams('author', 'WHERE id_author = ' . $iduser . ';', 'Author');
     }
 
+    public function deleteBook($ISBN)
+    {
+        return $this->removeWithParams('book',"ISBN = '$ISBN' ");
+    }
+    public function editBook($ISBN,$Title,$Synopsis)
+    {
+        return $this->editWithParams('book',"title_book = '$Title', synopsis_book = '$Synopsis' ","ISBN = '$ISBN' ");
+    }
+    public function addNewBook($ISBN,$Title,$Synopsis,$Date,$Author)
+    {
+        return $this->addWithParams('book'," ");
+
+    }
 
 
 }

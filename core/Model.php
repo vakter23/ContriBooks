@@ -44,6 +44,16 @@ abstract class Model
         $req->closeCursor();
         return $var;
     }
+    public function editWithParams($table,$set, $condition) {
+        $req = $this->getBdd()->prepare('UPDATE '.$table.' SET '.$set.' WHERE '. $condition.' ;');
+        $req->execute();
+        $req->closeCursor();
+    }
+    public function removeWithParams($table, $condition) {
+        $req = $this->getBdd()->prepare('DELETE FROM '.$table.' WHERE '.$condition.' ;');
+        $req->execute();
+        $req->closeCursor();
+    }
 
     protected function addWithParams($table,$params){
         // Les paramètres demandés sont les valeurs qu'il faut ajouter dans la bdd
