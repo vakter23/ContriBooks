@@ -48,9 +48,8 @@ class BookManager extends Model
         return $this->getBookByAuteur($iduser, 'isbn');
     }
 
-
     public function getTop50(){
-        return $this->getWithParams('book', 'ORDER BY RATE DESC LIMIT 50', 'Book');
+        return $this->getWithParams('book', 'ORDER BY rate DESC LIMIT 50', 'Book');
     }
     public function getBookByWishlist($iduser){
         return $this->getWithParams('book', 'natural join wish where book.isbn = wish.isbn AND wish.id_user = '.$iduser.';', 'Book' );
@@ -69,6 +68,10 @@ class BookManager extends Model
         return $this->getWithParams('author', 'WHERE id_author = ' . $iduser . ';', 'Author');
     }
 
+    public function getNewBooks() {
+        return $this->getWithParams('book', 'ORDER BY date_of_publication DESC', 'Book');
+    }
+
     public function deleteBook($ISBN)
     {
         return $this->removeWithParams('book',"ISBN = '$ISBN' ");
@@ -82,6 +85,7 @@ class BookManager extends Model
         return $this->addWithParams('book'," ");
 
     }
+
 
 
 }
