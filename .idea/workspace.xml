@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6064ea91-80c4-4b25-8c31-ab0b2a8df135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TicketReportManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/TicketReportManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/viewProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewProfile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Fusion" />
+        <entry key="$PROJECT_DIR$" value="Admin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611277480826</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add : Admin PART &amp; improve Accueil">
+      <created>1611279884886</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611279884886</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

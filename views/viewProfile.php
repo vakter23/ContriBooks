@@ -4,7 +4,9 @@
     </br>
     <?php if (isset($_SESSION['id']) && $_SESSION['id'] == 9){
         echo '<a class="nav-link active" href="/Contribooks/Admin">Adminstration</a></li>';
-    } ?>
+    } else{
+        echo '<a class="nav-link active" href="/Contribooks/Report">Signalement</a></li>';
+    }?>
     <h2><a>Votre profil : </a></h2>
     <hr>
 
