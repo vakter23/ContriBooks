@@ -18,9 +18,9 @@ class ControllerAccueil
     {
         $this->_bookManager = new BookManager;
         $newBooks = $this->_bookManager->getNewFiveBooks();
-
+        $newBestBooks = $this->_bookManager->getNewBestFiveBooks();
         $this->_view = new View('Accueil');
-        $this->_view->generate(array('newBooks' => $newBooks));
+        $this->_view->generate(array('newBooks' => $newBooks,'newBestBook'=>$newBestBooks));
 
     }
 

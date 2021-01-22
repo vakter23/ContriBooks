@@ -23,7 +23,7 @@
 <div class="container">
     <h2><a>Meilleurs livres du moments</a></h2>
     <ul class="nav justify-content-center mw-25">
-        <?php foreach($newBooks as $book): ?>
+        <?php foreach($newBestBook as $book): ?>
             <?php $ISBN = $book->getISBN();
             $img_link = "$ISBN".'.jpg';
             $filename = 'utils/media/img/book/'.$img_link;

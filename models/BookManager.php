@@ -10,6 +10,11 @@ class BookManager extends Model
     {
         return $this->getWithParams('book','ORDER BY date_of_publication DESC LIMIT 5;','Book');
     }
+    public function getNewBestFiveBooks()
+    {
+        return $this->getWithParams('book','ORDER BY date_of_publication DESC,rate LIMIT 5;','Book');
+    }
+
     public function search() {
         if(isset($_POST['query'])){$query = $_POST['query'];}else{$query='';}
         return $this->getWithParams('book', 'WHERE ISBN LIKE '."'".'%'.$query.'%'."'".' OR title_book LIKE '."'".'%'.$query.'%'."'".';','Book');
